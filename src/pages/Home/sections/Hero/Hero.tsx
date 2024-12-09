@@ -7,17 +7,29 @@ import theme from '../../../../theme'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
 
 const Hero = () => {
-  const StyledHero = styled('div')(({ theme }) => ({
+  const StyledHero = styled('div')(({}) => ({
     backgroundColor: theme.palette.primary.main,
     height: '100vh',
     display: 'flex',
-    alignItems: 'center',
+    [theme.breakpoints.up('xs')]: {
+      alignItems: 'flex-start',
+      paddingTop: '100px',
+    },
+    [theme.breakpoints.up('md')]: {
+      alignItems: 'center',
+      paddingTop: '0px',
+    },
   }))
 
   const StyledImg = styled('img')(() => ({
-    width: '80%',
     borderRadius: '50%',
     border: `1px solid ${theme.palette.primary.contrastText}`,
+    [theme.breakpoints.up('xs')]: {
+      width: '50%',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+    },
   }))
 
   return (
@@ -27,10 +39,10 @@ const Hero = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} md={5}>
               <Box position={'relative'}>
-                <Box position={'absolute'} width={'150%'} top={-100} right={0}>
+                <Box position={'absolute'} width={'100%'} top={-100} right={0}>
                   <AnimatedBackground />
                 </Box>
-                <Box position={'absolute'} textAlign={'center'}>
+                <Box position={'relative'} textAlign={'center'}>
                   <StyledImg src={Avatar} />
                 </Box>
               </Box>
