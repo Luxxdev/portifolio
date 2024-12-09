@@ -1,12 +1,13 @@
-import Hero from "./sections/Hero/Hero"
+import NavBar from '../../components/NavBar/NavBar'
+import Hero from './sections/Hero/Hero'
 
 const Home = () => {
-
-    return (
-        <>
-            <Hero />
-        </>
-    )
+  return (
+    <>
+      <NavBar />
+      <Hero />
+    </>
+  )
 }
 
 export default Home
