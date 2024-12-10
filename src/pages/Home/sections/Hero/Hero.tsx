@@ -17,7 +17,7 @@ const Hero = () => {
     },
     [theme.breakpoints.up('md')]: {
       alignItems: 'center',
-      paddingTop: '0px',
+      paddingTop: '40px',
     },
   }))
 
