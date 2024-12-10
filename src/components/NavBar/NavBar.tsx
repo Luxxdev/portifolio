@@ -1,18 +1,29 @@
-import { AppBar, MenuItem, styled, Toolbar } from '@mui/material'
+import { AppBar, Grid, MenuItem, styled, Toolbar, Typography } from '@mui/material'
 
 const NavBar = () => {
   const StyledToolbar = styled(Toolbar)(() => ({
     display: 'flex',
     justifyContent: 'space-evenly',
+    backgroundColor: 'black',
   }))
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <StyledToolbar>
-          <MenuItem>About</MenuItem>
-          <MenuItem>Skills</MenuItem>
-          <MenuItem>Projects</MenuItem>
+          <Grid container display={'flex'} justifyContent={'center'}>
+            <Grid borderLeft={1} borderColor={'white'} item md={3}>
+              <MenuItem>About</MenuItem>
+            </Grid>
+
+            <Grid item borderLeft={1} borderRight={1} borderColor={'white'} md={3} textAlign={'center'}>
+              <MenuItem>Skills</MenuItem>
+            </Grid>
+
+            <Grid item md={3}>
+              <MenuItem>Projects</MenuItem>
+            </Grid>
+          </Grid>
         </StyledToolbar>
       </AppBar>
     </>
