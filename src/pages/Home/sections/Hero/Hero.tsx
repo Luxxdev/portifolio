@@ -6,6 +6,7 @@ import StyledButton from '../../../../components/StyledButton/StyledButton'
 import theme from '../../../../theme'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
 import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
+import App from '../../../../App'
 
 const Hero = () => {
   const StyledHero = styled('div')(({}) => ({
@@ -59,14 +60,23 @@ const Hero = () => {
 
               <Grid container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
                 <Grid item xs={12} md={4} display={'flex'} justifyContent={'center'}>
-                  <StyledButton onClick={() => console.log('download')}>
+                  <StyledButton
+                    onClick={() => {
+                      const link = document.createElement('a')
+                      link.href = resume
+                      link.download = 'LucasQueiroloResume.pdf'
+                      document.body.appendChild(link)
+                      link.click()
+                      document.body.removeChild(link)
+                    }}
+                  >
                     <DownloadIcon />
-                    <Typography>Download Cv</Typography>
+                    <Typography>Download</Typography>
                   </StyledButton>
                 </Grid>
 
                 <Grid item xs={12} md={4} display={'flex'} justifyContent={'center'}>
-                  <StyledButton onClick={() => console.log('contact')}>
+                  <StyledButton onClick={() => console.log('donwload')}>
                     <AlternateEmailIcon />
                     <Typography>Contact Me</Typography>
                   </StyledButton>
