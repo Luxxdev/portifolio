@@ -1,11 +1,11 @@
 import { styled } from '@mui/material'
 import theme from '../../theme'
 import { ReactNode } from 'react'
-interface SkillsButton {
+interface SkillsButtonProps {
   children: ReactNode
 }
-const StyledButton: React.FC<SkillsButton> = ({ children }) => {
-  const StyledButton = styled('button')(() => ({
+const SkillsButton: React.FC<SkillsButtonProps> = ({ children }) => {
+  const SkillsButton = styled('button')(() => ({
     backgroundColor: 'transparent',
     border: `1px solid ${theme.palette.primary}`,
     borderRadius: '3px',
@@ -20,9 +20,9 @@ const StyledButton: React.FC<SkillsButton> = ({ children }) => {
   }))
   return (
     <>
-      <StyledButton>{children}</StyledButton>
+      <SkillsButton disabled={true}>{children}</SkillsButton>
     </>
   )
 }
 
-export default StyledButton
+export default SkillsButton

@@ -4,9 +4,10 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import EmailIcon from '@mui/icons-material/Email'
 
 const Footer = () => {
-  const StyledFooter = styled('div')(() => ({
+  const StyledFooter = styled('div')(({ theme }) => ({
     display: 'flex',
-    backgroundColor: 'grey',
+    backgroundColor: theme.palette.primary.dark,
+    color: theme.palette.primary.contrastText,
     justifyContent: 'space-evenly',
     padding: '20px',
   }))
