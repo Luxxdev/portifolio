@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="sticky">
         <StyledToolbar>
           <Grid container display={'flex'} justifyContent={'center'}>
             <Grid borderLeft={1} borderColor={'white'} item md={3}>

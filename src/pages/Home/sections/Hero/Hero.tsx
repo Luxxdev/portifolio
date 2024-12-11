@@ -5,6 +5,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from '../../../../components/StyledButton/StyledButton'
 import theme from '../../../../theme'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
+import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
 
 const Hero = () => {
   const StyledHero = styled('div')(({}) => ({
@@ -17,7 +18,7 @@ const Hero = () => {
     },
     [theme.breakpoints.up('md')]: {
       alignItems: 'center',
-      paddingTop: '40px',
+      paddingTop: '0',
     },
   }))
 
