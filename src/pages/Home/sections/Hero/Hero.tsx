@@ -6,7 +6,6 @@ import StyledButton from '../../../../components/StyledButton/StyledButton'
 import theme from '../../../../theme'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
 import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
-import App from '../../../../App'
 
 const Hero = () => {
   const StyledHero = styled('div')(({}) => ({
