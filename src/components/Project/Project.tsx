@@ -18,7 +18,6 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
   name = name ? name : 'Nome'
   image = image ? image : placeHolder
   description = description ? description : 'Descrição do projeto'
-
   const StyledProject = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
   }))
@@ -39,9 +38,9 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           {description}
         </Typography>
 
-        <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+        <Grid container display="flex" justifyContent="center" spacing={3} pt={3} alignContent={'end'}>
           {buttons.map((button, index) => (
-            <Grid item xs={6} md={3} key={index} display="flex" justifyContent="center">
+            <Grid item xs={6} md={3} key={index} display="flex">
               <StyledButton
                 onClick={() => {
                   const link = document.createElement('a')

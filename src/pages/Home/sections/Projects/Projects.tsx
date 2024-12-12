@@ -19,7 +19,11 @@ const Projects = () => {
             <Project
               name="Projeto 1"
               image={placeHolder}
-              description="blabla"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
+                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
+                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
+                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
+                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem."
               buttons={[
                 { label: 'View Project', link: 'https://www.google.com' },
                 { label: 'View Code', link: 'https://www.google.com' },
@@ -27,7 +31,12 @@ const Projects = () => {
             />
           </Grid>
           <Grid item xs={12} md={4} textAlign="center" border={1} borderColor={'white'} margin={5} padding={'16px'}>
-            <Project />
+            <Project
+              buttons={[
+                { label: 'View Project', link: 'https://www.google.com' },
+                { label: 'View Code', link: 'https://www.google.com' },
+              ]}
+            />
           </Grid>
           <Grid item xs={12} md={4} textAlign="center" border={1} borderColor={'white'} margin={5} padding={'16px'}>
             <Project />
