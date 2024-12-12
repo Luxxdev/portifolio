@@ -4,6 +4,14 @@ import About from './sections/About/About'
 import Hero from './sections/Hero/Hero'
 import Projects from './sections/Projects/Projects'
 
+// const StyledDiv = styled('div')(({ theme }) => ({
+//   overflowY: 'scroll',
+//   height: '100vh',
+//   scrollBehavior: 'smooth',
+//   scrollbarColor: 'red blue',
+//   // scrollbarColor: `${theme.palette.primary.light} ${theme.palette.primary.dark}`,
+// }))
+
 const Home = () => {
   return (
     <>
