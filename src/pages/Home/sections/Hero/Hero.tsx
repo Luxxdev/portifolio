@@ -10,14 +10,14 @@ import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
 const Hero = () => {
   const StyledHero = styled('div')(({}) => ({
     backgroundColor: theme.palette.primary.main,
-    height: '100vh',
     display: 'flex',
+    height: '100vh',
+    alignItems: 'center',
     [theme.breakpoints.up('xs')]: {
-      alignItems: 'flex-start',
-      paddingTop: '100px',
+      paddingBottom: '75px',
+      paddingTop: '-75px',
     },
     [theme.breakpoints.up('md')]: {
-      alignItems: 'center',
       paddingTop: '0',
     },
   }))

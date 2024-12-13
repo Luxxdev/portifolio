@@ -25,12 +25,12 @@ const Footer = () => {
       <StyledFooter id="footer">
         <Container>
           <Grid container display={'flex'} alignItems={'center'} justifyContent={'center'} textAlign={'center'} pb={2}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={4} md={4}>
               <StyledLink href="https://www.linkedin.com/in/lucasqueirolo/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon />
               </StyledLink>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={4} md={4}>
               <StyledLink href="https://github.com/Luxxdev" target="_blank" rel="noopener noreferrer">
                 <GitHubIcon />
               </StyledLink>
