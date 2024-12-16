@@ -11,15 +11,17 @@ const Hero = () => {
   const StyledHero = styled('div')(({}) => ({
     backgroundColor: theme.palette.primary.main,
     display: 'flex',
-    height: '100vh',
+    minHeight: '100vh',
     alignItems: 'center',
-    [theme.breakpoints.up('xs')]: {
-      paddingBottom: '75px',
-      paddingTop: '-75px',
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: '0',
-    },
+    paddingBottom: '75px',
+    paddingTop: '-75px',
+    // [theme.breakpoints.up('xs')]: {
+    //   paddingBottom: '75px',
+    //   paddingTop: '-75px',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   paddingTop: '0',
+    // },
   }))
 
   const StyledImg = styled('img')(() => ({
