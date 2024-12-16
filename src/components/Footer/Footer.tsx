@@ -1,6 +1,6 @@
 import { Container, Grid2, styled, Typography } from '@mui/material'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import GitHubIcon from '@mui/icons-material/GitHub'
+// import GitHubIcon from '@mui/icons-material/GitHub'
 import EmailIcon from '@mui/icons-material/Email'
 import CallIcon from '@mui/icons-material/Call'
 
@@ -15,11 +15,20 @@ const Footer = () => {
   }))
 
   const StyledLink = styled('a')(({ theme }) => ({
+    display: 'flex',
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
+    justifyContent: 'center',
     '&:hover': {
       cursor: 'pointer',
     },
+  }))
+
+  const StyledTypography = styled(Typography)(({}) => ({
+    fontWeight: 'lighter',
+    marginLeft: '10px',
+    variant: 'h6',
+    letterSpacing: 1,
   }))
 
   return (
@@ -29,29 +38,23 @@ const Footer = () => {
           <Typography variant="h3" textAlign={'center'} paddingBottom={'75px'}>
             Contato
           </Typography>
-          <Grid2 container spacing={5} display={'flex'} alignItems={'center'} justifyContent={'center'} textAlign={'center'}>
-            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 0'} border={1} borderColor="primary.contrastText">
+          <Grid2 container spacing={5}>
+            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 10px'} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://www.linkedin.com/in/lucasqueirolo/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon />
-                <Typography fontWeight={'lighter'} variant="h6">
-                  /lucasqueirolo
-                </Typography>
+                <StyledTypography>/lucasqueirolo</StyledTypography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 0'} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 10px'} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://mail.google.com/mail/u/0/?fs=1&to=lucas.queirolo.santos@gmail.com&body=Olá,&tf=cm" target="_blank" rel="noopener noreferrer">
                 <EmailIcon />
-                <Typography fontWeight={'lighter'} variant="h6">
-                  lucas.queirolo.s@gmail.com
-                </Typography>
+                <StyledTypography>lucas.queirolo.s@gmail.com</StyledTypography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 0'} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 10px'} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://web.whatsapp.com/send/?phone=5521999894540&text=Olá," target="_blank" rel="noopener noreferrer">
                 <CallIcon />
-                <Typography fontWeight={'lighter'} variant="h6">
-                  +55 (21) 99989-4540
-                </Typography>
+                <StyledTypography>+55 (21) 99989-4540</StyledTypography>
               </StyledLink>
             </Grid2>
             {/* <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
