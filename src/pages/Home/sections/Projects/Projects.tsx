@@ -6,8 +6,8 @@ const Projects = () => {
   const StyledProjects = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     minHeight: '100vh',
-    paddingBottom: '75px',
-    paddingTop: '75px',
+    paddingBottom: '50px',
+    paddingTop: '50px',
   }))
 
   return (

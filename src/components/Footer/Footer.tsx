@@ -25,37 +25,43 @@ const Footer = () => {
   return (
     <>
       <StyledFooter id="footer">
-        <Container maxWidth={false}>
-          <Typography variant="h3" textAlign={'center'} paddingBottom={'50px'}>
+        <Container>
+          <Typography variant="h3" textAlign={'center'} paddingBottom={'75px'}>
             Contato
           </Typography>
-          <Grid2 container display={'flex'} alignItems={'center'} justifyContent={'center'} textAlign={'center'}>
-            <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
+          <Grid2 container spacing={5} display={'flex'} alignItems={'center'} justifyContent={'center'} textAlign={'center'}>
+            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 0'} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://www.linkedin.com/in/lucasqueirolo/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon />
-                <Typography variant="h6">/lucasqueirolo</Typography>
+                <Typography fontWeight={'lighter'} variant="h6">
+                  /lucasqueirolo
+                </Typography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
+            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 0'} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://mail.google.com/mail/u/0/?fs=1&to=lucas.queirolo.santos@gmail.com&body=Olá,&tf=cm" target="_blank" rel="noopener noreferrer">
                 <EmailIcon />
-                <Typography variant="h6">lucas.queirolo.s@gmail.com</Typography>
+                <Typography fontWeight={'lighter'} variant="h6">
+                  lucas.queirolo.s@gmail.com
+                </Typography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
+            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 0'} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://web.whatsapp.com/send/?phone=5521999894540&text=Olá," target="_blank" rel="noopener noreferrer">
                 <CallIcon />
-                <Typography variant="h6">+55 (21) 99989-4540</Typography>
+                <Typography fontWeight={'lighter'} variant="h6">
+                  +55 (21) 99989-4540
+                </Typography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
+            {/* <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
               <StyledLink href="https://github.com/Luxxdev" target="_blank" rel="noopener noreferrer">
                 <GitHubIcon />
                 <Typography variant="h6">/Luxxdev</Typography>
               </StyledLink>
-            </Grid2>
+            </Grid2> */}
           </Grid2>
-          <Typography fontStyle={'italic'} paddingBottom={'10px'} paddingTop={'50px'} textAlign={'center'}>
+          <Typography fontSize={'small'} fontWeight={'lighter'} paddingBottom={'10px'} paddingTop={'75px'} textAlign={'center'}>
             © 2024 Lucas Queirolo - All rights reserved.
           </Typography>
         </Container>

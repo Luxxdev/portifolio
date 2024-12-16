@@ -14,8 +14,7 @@ const Hero = () => {
     display: 'flex',
     minHeight: '100vh',
     alignItems: 'center',
-    paddingBottom: '75px',
-    paddingTop: '-75px',
+    paddingBottom: '50px',
     // [theme.breakpoints.up('xs')]: {
     //   paddingBottom: '75px',
     //   paddingTop: '-75px',

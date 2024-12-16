@@ -7,8 +7,8 @@ const About = () => {
     backgroundColor: theme.palette.primary.light,
     display: 'flex',
     minHeight: '100vh',
-    paddingBottom: '75px',
-    paddingTop: '75px',
+    paddingBottom: '50px',
+    paddingTop: '50px',
     [theme.breakpoints.up('xs')]: {
       alignItems: 'flex-start',
     },
