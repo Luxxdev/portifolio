@@ -6,6 +6,7 @@ import StyledButton from '../../../../components/StyledButton/StyledButton'
 import theme from '../../../../theme'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
 import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
+import { ScrollTo } from '../../../../components/NavBar/NavBar'
 
 const Hero = () => {
   const StyledHero = styled('div')(({}) => ({
@@ -77,7 +78,7 @@ const Hero = () => {
                 </Grid2>
 
                 <Grid2 size={{ xs: 12, md: 4 }} display={'flex'} justifyContent={'center'}>
-                  <StyledButton onClick={() => console.log('donwload')}>
+                  <StyledButton onClick={() => ScrollTo('footer')}>
                     <AlternateEmailIcon />
                     <Typography>Contact Me</Typography>
                   </StyledButton>

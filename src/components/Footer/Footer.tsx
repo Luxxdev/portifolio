@@ -11,7 +11,7 @@ const Footer = () => {
     color: theme.palette.primary.contrastText,
     justifyContent: 'space-evenly',
     paddingTop: '50px',
-    paddingBottom: '50px',
+    // paddingBottom: '50px',
   }))
 
   const StyledLink = styled('a')(({ theme }) => ({
@@ -37,7 +37,7 @@ const Footer = () => {
               </StyledLink>
             </Grid2>
             <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
-              <StyledLink href="https://github.com/Luxxdev" target="_blank" rel="noopener noreferrer">
+              <StyledLink href="https://mail.google.com/mail/u/0/?fs=1&to=lucas.queirolo.santos@gmail.com&body=Olá,&tf=cm" target="_blank" rel="noopener noreferrer">
                 <EmailIcon />
                 <Typography variant="h6">lucas.queirolo.s@gmail.com</Typography>
               </StyledLink>
@@ -55,7 +55,9 @@ const Footer = () => {
               </StyledLink>
             </Grid2>
           </Grid2>
-          {/* <Typography textAlign={'center'}>© 2024 Lucas Queirolo - All rights reserved.</Typography> */}
+          <Typography fontStyle={'italic'} paddingBottom={'10px'} paddingTop={'50px'} textAlign={'center'}>
+            © 2024 Lucas Queirolo - All rights reserved.
+          </Typography>
         </Container>
       </StyledFooter>
     </>

@@ -41,7 +41,7 @@ const NavBar = () => {
   )
 }
 
-function ScrollTo(sectionId: string) {
+export function ScrollTo(sectionId: string) {
   const section = document.getElementById(sectionId)
   const nav = document.getElementById('navbar')
   console.log(section?.scrollHeight)
