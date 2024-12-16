@@ -19,7 +19,7 @@ const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio })
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '10px',
+    gap: '5px',
   }))
 
   return (

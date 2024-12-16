@@ -17,27 +17,17 @@ const About = () => {
     },
   }))
 
-  const StyledSchool = styled('div')(({ theme }) => ({
-    backgroundColor: 'transparent',
-    border: `1px solid ${theme.palette.primary.contrastText}`,
-    borderRadius: '3px',
-    padding: '5px',
-    width: '100%',
-    aspectRatio: 1 / 1,
-    color: theme.palette.primary.contrastText,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    justifyContent: 'center',
-    gap: '10px',
-  }))
   return (
     <>
       <StyledAbout id="about">
         <Container maxWidth="lg">
           <Grid2 container spacing={2} justifyContent={'center'}>
-            <Grid2 size={{ xs: 6, md: 2 }} textAlign={'center'}>
+            <Grid2 size={{ xs: 12, md: 12 }} paddingBottom={5} justifyContent={'center'}>
+              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>
+                About me
+              </Typography>
+            </Grid2>
+            <Grid2 size={{ xs: 6, md: 2 }} textAlign={'center'} paddingBottom={5}>
               <SkillsButton fixedSizeRatio={true}>
                 <SchoolIcon />
                 <Typography fontWeight={'bold'}>Formação</Typography>
@@ -47,10 +37,6 @@ const About = () => {
             </Grid2>
 
             <Grid2 size={{ xs: 12, md: 12 }} borderBottom={1} borderColor="primary.contrastText" paddingBottom={10} justifyContent={'center'}>
-              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>
-                About me
-              </Typography>
-
               <Typography color="primary.contrastText" variant="h5" textAlign="center">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
                 consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.
