@@ -1,4 +1,4 @@
-import { Grid, styled, Typography } from '@mui/material'
+import { Grid2, styled, Typography } from '@mui/material'
 import StyledButton from '../StyledButton/StyledButton'
 import placeHolder from '../../assets/images/placeHolder.png'
 
@@ -38,9 +38,9 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           {description}
         </Typography>
 
-        <Grid container display="flex" justifyContent="center" spacing={3} pt={3} alignContent={'end'}>
+        <Grid2 container display="flex" justifyContent="center" spacing={3} pt={3} alignContent={'end'}>
           {buttons.map((button, index) => (
-            <Grid item xs={6} md={3} key={index} display="flex">
+            <Grid2 size={{ xs: 6, md: 3 }} key={index} display="flex">
               <StyledButton
                 onClick={() => {
                   const link = document.createElement('a')
@@ -54,9 +54,9 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
               >
                 <Typography>{button.label}</Typography>
               </StyledButton>
-            </Grid>
+            </Grid2>
           ))}
-        </Grid>
+        </Grid2>
       </StyledProject>
     </>
   )

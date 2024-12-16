@@ -1,4 +1,4 @@
-import { Box, Container, Grid, styled, Typography } from '@mui/material'
+import { Box, Container, Grid2, styled, Typography } from '@mui/material'
 import Avatar from '../../../../assets/images/avatar.jpg'
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
@@ -39,8 +39,8 @@ const Hero = () => {
     <>
       <StyledHero id="hero">
         <Container maxWidth={'lg'}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={5}>
+          <Grid2 container spacing={2}>
+            <Grid2 size={{ xs: 12, md: 5 }}>
               <Box position={'relative'}>
                 <Box position={'absolute'} width={'100%'} top={-100} right={0}>
                   <AnimatedBackground />
@@ -49,9 +49,9 @@ const Hero = () => {
                   <StyledImg src={Avatar} />
                 </Box>
               </Box>
-            </Grid>
+            </Grid2>
 
-            <Grid item xs={12} md={7}>
+            <Grid2 size={{ xs: 12, md: 7 }}>
               <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={2}>
                 Lucas Queirolo
               </Typography>
@@ -59,8 +59,8 @@ const Hero = () => {
                 Game Developer
               </Typography>
 
-              <Grid container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
-                <Grid item xs={12} md={4} display={'flex'} justifyContent={'center'}>
+              <Grid2 container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
+                <Grid2 size={{ xs: 12, md: 4 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton
                     onClick={() => {
                       const link = document.createElement('a')
@@ -74,17 +74,17 @@ const Hero = () => {
                     <DownloadIcon />
                     <Typography>Download</Typography>
                   </StyledButton>
-                </Grid>
+                </Grid2>
 
-                <Grid item xs={12} md={4} display={'flex'} justifyContent={'center'}>
+                <Grid2 size={{ xs: 12, md: 4 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton onClick={() => console.log('donwload')}>
                     <AlternateEmailIcon />
                     <Typography>Contact Me</Typography>
                   </StyledButton>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
+                </Grid2>
+              </Grid2>
+            </Grid2>
+          </Grid2>
         </Container>
       </StyledHero>
     </>
