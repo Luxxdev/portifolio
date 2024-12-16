@@ -29,6 +29,12 @@ const NavBar = () => {
           <StyledA onClick={() => ScrollTo('projects')}>
             <MenuItem>Projects</MenuItem>
           </StyledA>
+          {/* <StyledA onClick={() => ScrollTo('projects')}>
+            <MenuItem>Experience</MenuItem>
+          </StyledA>
+          <StyledA onClick={() => ScrollTo('footer')}>
+            <MenuItem>Contact</MenuItem>
+          </StyledA> */}
         </StyledToolbar>
       </AppBar>
     </>
