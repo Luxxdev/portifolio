@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "navMain": "Main",
+    "navAbout": "Sobre mim",
+    "navProjects": "Projetos",
+    "heroH2": "Desenvolvedor de software",
+    "heroButtonDownload": "Baixar CV",
+    "heroButtonContact": "Entre em contato",
+    "aboutTittle": "Sobre mim",
+    "aboutText": "Olá! Meu nome é Pedro Teixeira Villafuerte sou estudante de programação. Ao longo da minha jornada acadêmica, tive a oportunidade de aprender diversas linguagens de programação, como Python, JavaScript e Java, além de me aprofundar em conceitos essenciais como algoritmos, estrutura de dados, banco de dados e desenvolvimento web.",
+    "skillsTittle": "Habilidades",
+    "projectsTittle": "Projetos",
+    "projectsButtonViewProject": "Ver Projeto",
+    "projectsButtonViewCode": "Ver Código",
+    "project1Tittle": "Portfólio",
+    "project1Text": "Projeto feito usando React, biblioteca Material UI e a biblioteca i18n.",
+    "project2Tittle": "CRUD",
+    "project2Text": "Projeto em construção",
+    "project3Tittle": "Projeto 3",
+    "project3Text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.",
+    "project4Tittle": "Projeto 4",
+    "project4Text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem."
+  }
+}

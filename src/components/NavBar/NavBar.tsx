@@ -1,6 +1,10 @@
 import { AppBar, MenuItem, styled, Toolbar } from '@mui/material'
+import { LanguageSwitcher } from '../LanguageSwitcher'
+import { useTranslation } from 'react-i18next'
 
 const NavBar = () => {
+  const { t } = useTranslation()
+
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-evenly',
     backgroundColor: theme.palette.primary.dark,
@@ -21,7 +25,7 @@ const NavBar = () => {
       <AppBar position="sticky">
         <StyledToolbar id="navbar">
           <StyledA onClick={() => ScrollTo('hero')}>
-            <MenuItem>Main</MenuItem>
+            <MenuItem>{t('navMain')}</MenuItem>
           </StyledA>
           <StyledA onClick={() => ScrollTo('about')}>
             <MenuItem>About</MenuItem>
@@ -29,6 +33,8 @@ const NavBar = () => {
           <StyledA onClick={() => ScrollTo('projects')}>
             <MenuItem>Projects</MenuItem>
           </StyledA>
+          <LanguageSwitcher />
+
           {/* <StyledA onClick={() => ScrollTo('projects')}>
             <MenuItem>Experience</MenuItem>
           </StyledA>
