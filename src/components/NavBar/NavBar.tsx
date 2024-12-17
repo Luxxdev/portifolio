@@ -1,5 +1,5 @@
 import { AppBar, MenuItem, styled, Toolbar } from '@mui/material'
-import { LanguageSwitcher } from '../LanguageSwitcher'
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
 
 const NavBar = () => {
