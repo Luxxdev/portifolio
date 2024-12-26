@@ -1,4 +1,4 @@
-import { Box, Container, Grid2, styled, Typography, useMediaQuery } from '@mui/material'
+import { Box, Container, Grid2, styled, Typography } from '@mui/material'
 import Avatar from '../../../../assets/images/avatar.jpg'
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
