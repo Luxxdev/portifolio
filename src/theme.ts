@@ -25,7 +25,7 @@ let themeDark = createTheme({
     primary: {
       light: '#252525',
       main: '#191919',
-      dark: '#0a0a0a',
+      dark: '#111111',
       contrastText: '#f0f0f0'
     },
     secondary: {

@@ -1,22 +1,31 @@
-import { AppBar, MenuItem, styled, Toolbar } from '@mui/material'
+import { AppBar, MenuItem, styled, Toolbar, Typography, useMediaQuery } from '@mui/material'
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
+import MenuIcon from '@mui/icons-material/Menu';
 
 const NavBar = () => {
   const { t } = useTranslation()
 
+  const biggerScreen = useMediaQuery((theme) => theme.breakpoints.up('md'))
+
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     backgroundColor: theme.palette.primary.dark,
+    [theme.breakpoints.up('md')]: {
+      justifyContent: 'center',
+
+
+    },
   }))
 
-  const StyledMenu = styled(MenuItem)(({ theme, ...props }) => ({
+  const StyledMenu = styled(MenuItem)(({ theme }) => ({
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     height: '5vh',
     alignItems: 'center',
     display: 'flex',
+    margin: '0px 5vw',
     '&:hover': {
       textDecoration: 'underline',
       cursor: 'pointer',
@@ -27,25 +36,43 @@ const NavBar = () => {
   return (
     <>
       <AppBar position="sticky">
-        <StyledToolbar id="navbar">
-          <StyledMenu onClick={() => ScrollTo('hero')}>
-            {t('navMain')}
-          </StyledMenu>
-          <StyledMenu onClick={() => ScrollTo('about')}>
-            About
-          </StyledMenu>
-          <StyledMenu onClick={() => ScrollTo('projects')}>
-            Projects
-          </StyledMenu>
-          {/* <StyledA onClick={() => ScrollTo('projects')}>
+        {biggerScreen ? (
+          <StyledToolbar id="navbar">
+            <DarkModeToggle />
+
+            <StyledMenu onClick={() => ScrollTo('hero')}>
+              {t('navMain')}
+            </StyledMenu>
+
+            <StyledMenu onClick={() => ScrollTo('about')}>
+              About
+            </StyledMenu>
+
+            <StyledMenu onClick={() => ScrollTo('projects')}>
+              Projects
+            </StyledMenu>
+            {/* <StyledA onClick={() => ScrollTo('projects')}>
             <MenuItem>Experience</MenuItem>
             </StyledA>
             <StyledA onClick={() => ScrollTo('footer')}>
             <MenuItem>Contact</MenuItem>
             </StyledA> */}
-        </StyledToolbar>
-        <LanguageSwitcher />
-        <DarkModeToggle />
+            <LanguageSwitcher />
+          </StyledToolbar>
+
+        ) : (
+          <StyledToolbar id="navbar">
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left', padding: '5px' }}>
+              <Typography color="primary.contrastText" fontSize={'large'}>
+                Lucas Queirolo
+              </Typography>
+              <Typography color="primary.contrastText" fontSize={'small'} fontWeight={'lighter'}>
+                Game Developer
+              </Typography>
+            </div>
+            <MenuIcon />
+          </StyledToolbar>
+        )}
       </AppBar >
     </>
   )

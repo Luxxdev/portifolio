@@ -34,7 +34,7 @@ export const LanguageSwitcher = () => {
     color: theme.palette.primary.contrastText,
     display: 'flex',
     aspectRatio: 1 / 1,
-    position: 'absolute',
+    position: theme.breakpoints.up('md') ? 'absolute' : 'relative',
     top: '1vh',
     right: '30px',
     alignItems: 'center',

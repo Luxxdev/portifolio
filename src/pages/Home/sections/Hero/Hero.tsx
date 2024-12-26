@@ -1,4 +1,4 @@
-import { Box, Container, Grid2, styled, Typography } from '@mui/material'
+import { Box, Container, Grid2, styled, Typography, useMediaQuery } from '@mui/material'
 import Avatar from '../../../../assets/images/avatar.jpg'
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
@@ -38,8 +38,8 @@ const Hero = () => {
   return (
     <>
       <StyledHero id="hero">
-        <Container maxWidth={'lg'}>
-          <Grid2 container spacing={2}>
+        <Container maxWidth={'lg'} >
+          <Grid2 container spacing={2} alignItems={'center'}>
             <Grid2 size={{ xs: 12, md: 5 }}>
               <Box position={'relative'}>
                 <Box position={'absolute'} width={'100%'} top={-100} right={0}>
@@ -52,10 +52,10 @@ const Hero = () => {
             </Grid2>
 
             <Grid2 size={{ xs: 12, md: 7 }}>
-              <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={2}>
+              <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={2} >
                 Lucas Queirolo
               </Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign={'center'}>
+              <Typography color="primary.contrastText" variant="h2" textAlign={'center'} pb={2}>
                 Game Developer
               </Typography>
 
