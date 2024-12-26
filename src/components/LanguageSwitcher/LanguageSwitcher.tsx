@@ -36,7 +36,7 @@ export const LanguageSwitcher = () => {
     aspectRatio: 1 / 1,
     position: theme.breakpoints.up('md') ? 'absolute' : 'relative',
     top: '1vh',
-    right: '30px',
+    left: '30px',
     alignItems: 'center',
     justifyContent: 'center',
     '&:hover': {

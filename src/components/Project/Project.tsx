@@ -36,7 +36,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
 
   return (
     <>
-      <Grid2 size={{ xs: 12, md: 4.5 }} textAlign="center" border={1} borderColor={'white'} margin={5} >
+      <Grid2 size={{ xs: 12, md: 4.5 }} textAlign="center" border={1} borderColor={"primary.contrastText"} margin={5} >
         <StyledProject>
           <Typography color="primary.contrastText" variant="h4" textAlign="left" pb={2}>
             {name}

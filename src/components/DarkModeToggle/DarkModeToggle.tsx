@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
     [theme.breakpoints.up('md')]: {
       position: 'absolute',
       top: '1.5vh',
-      left: '30px',
+      right: '30px',
     },
     display: 'flex',
     '&:hover': {

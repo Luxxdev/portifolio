@@ -28,23 +28,19 @@ const Experiences = () => {
                                 Experience
                             </Typography>
                         </Grid2>
-                        <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'} border={1} borderColor={'"primary.contrastText"'} margin={5}  >
-                            <Experience
-                                name='Emprego 1'
-                                date='2021-2022'
-                                description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
+                        <Experience
+                            name='Emprego 1'
+                            date='2021-2022'
+                            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
                 consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationemLorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
                 consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationemLorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
                 consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationemLorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
                 consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.' />
-                        </Grid2>
-                        <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'} border={1} borderColor={'"primary.contrastText"'} margin={5}  >
-                            <Experience
-                                name='Emprego 1'
-                                date='2021-2022'
-                                description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
+                        <Experience
+                            name='Emprego 1'
+                            date='2021-2022'
+                            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
                 consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.' />
-                        </Grid2>
                     </Grid2>
                 </Container>
             </StyledExperience >
