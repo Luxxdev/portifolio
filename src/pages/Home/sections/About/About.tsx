@@ -5,7 +5,7 @@ import SchoolIcon from '@mui/icons-material/School'
 const About = () => {
 
   const StyledAbout = styled('div')(({ theme }) => ({
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     display: 'flex',
     minHeight: '100vh',
     paddingBottom: '50px',

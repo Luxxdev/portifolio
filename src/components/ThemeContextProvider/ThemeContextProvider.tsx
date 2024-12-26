@@ -13,7 +13,7 @@ export const useThemeContext = () => {
 }
 
 const ThemeContextProvider: FC<PropsWithChildren> = ({ children }) => {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
     const toggleTheme = () => {
         setDarkMode(!darkMode);

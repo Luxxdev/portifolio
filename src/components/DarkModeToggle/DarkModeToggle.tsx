@@ -1,5 +1,5 @@
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { styled } from '@mui/material';
 import { useThemeContext } from '../ThemeContextProvider/ThemeContextProvider';
 
@@ -11,16 +11,17 @@ const DarkModeToggle = () => {
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     alignItems: 'center',
-    height: '5vh',
+
     display: 'flex',
     '&:hover': {
+      transform: 'scale(1.2)',
       cursor: 'pointer',
     },
   }))
 
   return (
     <StyledA onClick={toggleTheme}>
-      {theme.palette.mode === 'dark' ? <LightModeIcon fontSize='large' /> : <DarkModeIcon fontSize='large' />}
+      {theme.palette.mode === 'dark' ? <LightModeOutlinedIcon fontSize='large' /> : <DarkModeOutlinedIcon fontSize='large' />}
     </StyledA>
   )
 }

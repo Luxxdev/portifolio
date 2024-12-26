@@ -10,7 +10,7 @@ import { ScrollTo } from '../../../../components/NavBar/NavBar'
 const Hero = () => {
 
   const StyledHero = styled('div')(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.light,
     display: 'flex',
     minHeight: '100vh',
     alignItems: 'center',

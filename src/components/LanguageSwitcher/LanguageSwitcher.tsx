@@ -39,7 +39,7 @@ export const LanguageSwitcher = () => {
     justifyContent: 'center',
     '&:hover': {
       cursor: 'pointer',
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.secondary.light,
     },
   }))
 

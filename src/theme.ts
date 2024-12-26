@@ -4,10 +4,14 @@ let themeLight = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#ffffff',
+      light: '#ffffff',
+      main: '#f0f0f0',
+      dark: '#b0b0b0',
+      contrastText: '#333333'
     },
     secondary: {
-      main: '#ffffff',
+      main: '#b0b0b0',
+      light: '#a0a0a0',
     },
   },
   typography: {
@@ -19,10 +23,14 @@ let themeDark = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#232323',
+      light: '#252525',
+      main: '#191919',
+      dark: '#0a0a0a',
+      contrastText: '#f0f0f0'
     },
     secondary: {
-      main: '#4f8e3e',
+      main: '#353535',
+      light: '#181818',
     },
   },
   typography: {

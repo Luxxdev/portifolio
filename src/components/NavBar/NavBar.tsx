@@ -8,15 +8,19 @@ const NavBar = () => {
 
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-evenly',
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
   }))
-  const StyledA = styled('a')(({ theme }) => ({
+
+  const StyledMenu = styled(MenuItem)(({ theme }) => ({
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     height: '5vh',
+    alignItems: 'center',
     display: 'flex',
     '&:hover': {
+      textDecoration: 'underline',
       cursor: 'pointer',
+      backgroundColor: theme.palette.secondary.light,
     },
   }))
 
@@ -24,15 +28,15 @@ const NavBar = () => {
     <>
       <AppBar position="sticky">
         <StyledToolbar id="navbar">
-          <StyledA onClick={() => ScrollTo('hero')}>
-            <MenuItem>{t('navMain')}</MenuItem>
-          </StyledA>
-          <StyledA onClick={() => ScrollTo('about')}>
-            <MenuItem>About</MenuItem>
-          </StyledA>
-          <StyledA onClick={() => ScrollTo('projects')}>
-            <MenuItem>Projects</MenuItem>
-          </StyledA>
+          <StyledMenu onClick={() => ScrollTo('hero')}>
+            {t('navMain')}
+          </StyledMenu>
+          <StyledMenu onClick={() => ScrollTo('about')}>
+            About
+          </StyledMenu>
+          <StyledMenu onClick={() => ScrollTo('projects')}>
+            Projects
+          </StyledMenu>
           <LanguageSwitcher />
           <DarkModeToggle />
           {/* <StyledA onClick={() => ScrollTo('projects')}>

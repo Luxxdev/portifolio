@@ -20,7 +20,10 @@ const Footer = () => {
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     justifyContent: 'center',
+    alignItems: 'center',
+    height: '5vh',
     '&:hover': {
+      backgroundColor: theme.palette.secondary.light,
       cursor: 'pointer',
     },
   }))
@@ -40,19 +43,19 @@ const Footer = () => {
             Contato
           </Typography>
           <Grid2 container spacing={5}>
-            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 10px'} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} border={1} borderColor="primary.contrastText" alignContent={'center'}>
               <StyledLink href="https://www.linkedin.com/in/lucasqueirolo/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon />
                 <StyledTypography>/lucasqueirolo</StyledTypography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 10px'} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://mail.google.com/mail/u/0/?fs=1&to=lucas.queirolo.santos@gmail.com&body=Olá,&tf=cm" target="_blank" rel="noopener noreferrer">
                 <EmailIcon />
                 <StyledTypography>lucas.queirolo.s@gmail.com</StyledTypography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }} padding={'10px 10px'} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} border={1} borderColor="primary.contrastText">
               <StyledLink href="https://web.whatsapp.com/send/?phone=5521999894540&text=Olá," target="_blank" rel="noopener noreferrer">
                 <CallIcon />
                 <StyledTypography>+55 (21) 99989-4540</StyledTypography>
