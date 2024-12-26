@@ -34,7 +34,9 @@ export const LanguageSwitcher = () => {
     color: theme.palette.primary.contrastText,
     display: 'flex',
     aspectRatio: 1 / 1,
-
+    position: 'absolute',
+    top: '1vh',
+    right: '30px',
     alignItems: 'center',
     justifyContent: 'center',
     '&:hover': {

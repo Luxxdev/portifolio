@@ -11,7 +11,7 @@ const NavBar = () => {
     backgroundColor: theme.palette.primary.dark,
   }))
 
-  const StyledMenu = styled(MenuItem)(({ theme }) => ({
+  const StyledMenu = styled(MenuItem)(({ theme, ...props }) => ({
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     height: '5vh',
@@ -37,16 +37,16 @@ const NavBar = () => {
           <StyledMenu onClick={() => ScrollTo('projects')}>
             Projects
           </StyledMenu>
-          <LanguageSwitcher />
-          <DarkModeToggle />
           {/* <StyledA onClick={() => ScrollTo('projects')}>
             <MenuItem>Experience</MenuItem>
-          </StyledA>
-          <StyledA onClick={() => ScrollTo('footer')}>
+            </StyledA>
+            <StyledA onClick={() => ScrollTo('footer')}>
             <MenuItem>Contact</MenuItem>
-          </StyledA> */}
+            </StyledA> */}
         </StyledToolbar>
-      </AppBar>
+        <LanguageSwitcher />
+        <DarkModeToggle />
+      </AppBar >
     </>
   )
 }

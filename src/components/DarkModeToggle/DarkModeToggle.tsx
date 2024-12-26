@@ -11,7 +11,9 @@ const DarkModeToggle = () => {
     color: theme.palette.primary.contrastText,
     textDecoration: 'none',
     alignItems: 'center',
-
+    position: 'absolute',
+    top: '1.5vh',
+    left: '30px',
     display: 'flex',
     '&:hover': {
       transform: 'scale(1.2)',
