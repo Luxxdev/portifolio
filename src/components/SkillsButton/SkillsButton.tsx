@@ -1,12 +1,11 @@
 import { styled } from '@mui/material'
-import theme from '../../theme'
 import { ReactNode } from 'react'
 interface SkillsButtonProps {
   children: ReactNode
   fixedSizeRatio?: boolean
 }
 const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio }) => {
-  const SkillsButton = styled('div')(() => ({
+  const SkillsButton = styled('div')(({ theme }) => ({
     backgroundColor: 'transparent',
     border: `1px solid ${theme.palette.primary.contrastText}`,
     borderRadius: '3px',

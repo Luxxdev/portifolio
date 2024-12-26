@@ -4,7 +4,7 @@ import About from './sections/About/About'
 import Hero from './sections/Hero/Hero'
 import Projects from './sections/Projects/Projects'
 
-// const StyledDiv = styled('div')(({ theme }) => ({
+// const StyledDiv = styled('div')(({  }) => ({
 //   overflowY: 'scroll',
 //   height: '100vh',
 //   scrollBehavior: 'smooth',

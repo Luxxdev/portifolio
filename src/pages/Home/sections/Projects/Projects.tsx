@@ -3,6 +3,7 @@ import placeHolder from '../../../../assets/images/placeHolder.png'
 import Project from '../../../../components/Project/Project'
 
 const Projects = () => {
+
   const StyledProjects = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     minHeight: '100vh',

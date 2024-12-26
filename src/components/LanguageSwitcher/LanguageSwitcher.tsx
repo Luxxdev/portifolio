@@ -5,7 +5,8 @@ import { styled, Typography } from '@mui/material'
 
 export const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation()
-  const LanguageSwitcher = styled('div')(({ theme }) => ({
+
+  const LanguageSwitcher = styled('div')(({ }) => ({
     // [theme.breakpoints.up('xs')]: {
     // position: 'relative',
     // },
@@ -15,7 +16,7 @@ export const LanguageSwitcher = () => {
     //   right: '5px',
     // },
   }))
-  //   const StyledImg = styled('img')(({ theme }) => ({
+  //   const StyledImg = styled('img')(({  }) => ({
   //     [theme.breakpoints.up('xs')]: {
   //       height: '2em',
   //     },

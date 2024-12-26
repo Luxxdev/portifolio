@@ -3,13 +3,13 @@ import Avatar from '../../../../assets/images/avatar.jpg'
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from '../../../../components/StyledButton/StyledButton'
-import theme from '../../../../theme'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
 import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
 
 const Hero = () => {
-  const StyledHero = styled('div')(({}) => ({
+
+  const StyledHero = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     display: 'flex',
     minHeight: '100vh',
@@ -24,7 +24,7 @@ const Hero = () => {
     // },
   }))
 
-  const StyledImg = styled('img')(() => ({
+  const StyledImg = styled('img')(({ theme }) => ({
     borderRadius: '50%',
     border: `1px solid ${theme.palette.primary.contrastText}`,
     [theme.breakpoints.up('xs')]: {

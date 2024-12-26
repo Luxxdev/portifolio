@@ -5,6 +5,7 @@ import EmailIcon from '@mui/icons-material/Email'
 import CallIcon from '@mui/icons-material/Call'
 
 const Footer = () => {
+
   const StyledFooter = styled('div')(({ theme }) => ({
     display: 'flex',
     backgroundColor: theme.palette.primary.dark,
@@ -24,7 +25,7 @@ const Footer = () => {
     },
   }))
 
-  const StyledTypography = styled(Typography)(({}) => ({
+  const StyledTypography = styled(Typography)(({ }) => ({
     fontWeight: 'lighter',
     marginLeft: '10px',
     variant: 'h6',

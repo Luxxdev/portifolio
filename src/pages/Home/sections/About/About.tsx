@@ -3,6 +3,7 @@ import SkillsButton from '../../../../components/SkillsButton/SkillsButton'
 import SchoolIcon from '@mui/icons-material/School'
 
 const About = () => {
+
   const StyledAbout = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
     display: 'flex',

@@ -18,13 +18,16 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
   name = name ? name : 'Nome'
   image = image ? image : placeHolder
   description = description ? description : 'Descrição do projeto'
+
   const StyledProject = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
   }))
-  const StyledImg = styled('img')(({}) => ({
+
+  const StyledImg = styled('img')(({ }) => ({
     width: '40%',
     marginBottom: '10px',
   }))
+
   return (
     <>
       <StyledProject>
