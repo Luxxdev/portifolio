@@ -1,6 +1,7 @@
 import { AppBar, MenuItem, styled, Toolbar } from '@mui/material'
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const NavBar = () => {
   const { t } = useTranslation()
@@ -34,7 +35,9 @@ const NavBar = () => {
             <MenuItem>Projects</MenuItem>
           </StyledA>
           <LanguageSwitcher />
-
+          <StyledA onClick={() => console.log('dark mode')}>
+            <MenuItem><DarkModeIcon /></MenuItem>
+          </StyledA>
           {/* <StyledA onClick={() => ScrollTo('projects')}>
             <MenuItem>Experience</MenuItem>
           </StyledA>
