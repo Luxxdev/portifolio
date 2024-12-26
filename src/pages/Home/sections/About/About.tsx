@@ -10,12 +10,12 @@ const About = () => {
     minHeight: '100vh',
     paddingBottom: '50px',
     paddingTop: '50px',
-    [theme.breakpoints.up('xs')]: {
-      alignItems: 'flex-start',
-    },
-    [theme.breakpoints.up('md')]: {
-      alignItems: 'center',
-    },
+    // [theme.breakpoints.up('xs')]: {
+    //   alignItems: 'flex-start',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   alignItems: 'center',
+    // },
   }))
 
   return (
@@ -28,7 +28,7 @@ const About = () => {
                 About me
               </Typography>
             </Grid2>
-            <Grid2 size={{ xs: 6, md: 2 }} textAlign={'center'} paddingBottom={5}>
+            <Grid2 size={{ xs: 6, md: 12 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5}>
               <SkillsButton fixedSizeRatio={true}>
                 <SchoolIcon />
                 <Typography fontWeight={'bold'}>Formação</Typography>

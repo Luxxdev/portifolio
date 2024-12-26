@@ -5,7 +5,7 @@ import Project from '../../../../components/Project/Project'
 const Projects = () => {
 
   const StyledProjects = styled('div')(({ theme }) => ({
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     minHeight: '100vh',
     paddingBottom: '50px',
     paddingTop: '50px',

@@ -10,7 +10,7 @@ const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio })
     border: `1px solid ${theme.palette.primary.contrastText}`,
     borderRadius: '3px',
     padding: '15px 15px',
-    width: '100%',
+    width: fixedSizeRatio ? 'fit-content' : '100%',
     margin: fixedSizeRatio ? '0px' : '20px',
     aspectRatio: fixedSizeRatio ? 1 / 1 : 'auto',
     color: theme.palette.primary.contrastText,

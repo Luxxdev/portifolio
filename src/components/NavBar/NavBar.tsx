@@ -48,15 +48,14 @@ const NavBar = () => {
               About
             </StyledMenu>
 
+            <StyledMenu onClick={() => ScrollTo('experience')}>
+              Experience
+            </StyledMenu>
+
             <StyledMenu onClick={() => ScrollTo('projects')}>
               Projects
             </StyledMenu>
-            {/* <StyledA onClick={() => ScrollTo('projects')}>
-            <MenuItem>Experience</MenuItem>
-            </StyledA>
-            <StyledA onClick={() => ScrollTo('footer')}>
-            <MenuItem>Contact</MenuItem>
-            </StyledA> */}
+
             <LanguageSwitcher />
           </StyledToolbar>
 
