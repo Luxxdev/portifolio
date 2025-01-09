@@ -50,7 +50,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
 
           <Grid2 container display="flex" justifyContent="center" spacing={3} pt={3} alignItems={'center'}>
             {buttons.map((button, index) => (
-              <Grid2 size={{ xs: 6, md: 3 }} key={index}>
+              <Grid2 size={{ xs: 6, md: 6 }} key={index}>
                 <StyledButton
                   onClick={() => {
                     const link = document.createElement('a')

@@ -4,15 +4,17 @@ MELHORAS
 - mudar a animação atrás da pfp
 - melhorar tamanho dos projetos / melhorar toda a aparencia
 - colocar tecnologias usadas nos projetos
+- melhorar o tamanho do StyledButton
 
 TRADUÇÃO
 - finalizar tradução em cada arquivo <!-- feito --> 
-- finalizar os arquivos json com as traduções
+- finalizar os arquivos json com as traduções <!-- feito --> 
 - mudar o download de acordo com a lingua <!-- feito --> 
 - mudar mensagens de contato (email e whatsapp) de acordo com a lingua <!-- feito --> 
-- mudar o altimg de acordo com a lingua?
 
 NÃO IMPLEMENTADO
+- projetos
+- experiencias
 - navbar no celular
 - animações
 

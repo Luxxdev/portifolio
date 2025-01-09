@@ -54,16 +54,25 @@ const Hero = () => {
               </Box>
             </Grid2>
 
-            <Grid2 size={{ xs: 12, md: 7 }}>
-              <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={2} >
-                Lucas Queirolo
-              </Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign={'center'} pb={2}>
-                {t('heroRole')}
-              </Typography>
+            <Grid2 size={{ xs: 12, md: 7 }} >
+
+              <Grid2 container display={'flex'} justifyContent={'center'}>
+                <Grid2 size={{ xs: 12, md: 12 }} display={'flex'} justifyContent={'center'}>
+                  <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={5} pt={{ xs: 5, md: 0 }}>
+                    Lucas Queirolo
+                  </Typography>
+                </Grid2>
+
+                <Grid2 size={{ xs: 12, md: 12 }} display={'flex'} justifyContent={'center'}>
+                  <Typography color="primary.contrastText" variant="h2" textAlign={'center'} pb={5} display={'flex'} maxWidth={450} >
+                    {t('heroRole')}
+                  </Typography>
+                </Grid2>
+              </Grid2>
+
 
               <Grid2 container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
-                <Grid2 size={{ xs: 12, md: 4 }} display={'flex'} justifyContent={'center'}>
+                <Grid2 size={{ xs: 7, md: 5 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton
                     onClick={() => {
                       const link = document.createElement('a')
@@ -75,11 +84,11 @@ const Hero = () => {
                     }}
                   >
                     <DownloadIcon />
-                    <Typography>{t('heroButtonDownload')}</Typography>
+                    <Typography >{t('heroButtonDownload')}</Typography>
                   </StyledButton>
                 </Grid2>
 
-                <Grid2 size={{ xs: 12, md: 4 }} display={'flex'} justifyContent={'center'}>
+                <Grid2 size={{ xs: 7, md: 5 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton onClick={() => ScrollTo('footer')}>
                     <AlternateEmailIcon />
                     <Typography>{t('heroButtonContact')}</Typography>

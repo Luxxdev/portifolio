@@ -14,8 +14,6 @@ const NavBar = () => {
     backgroundColor: theme.palette.primary.dark,
     [theme.breakpoints.up('md')]: {
       justifyContent: 'center',
-
-
     },
   }))
 
@@ -49,7 +47,7 @@ const NavBar = () => {
             </StyledMenu>
 
             <StyledMenu onClick={() => ScrollTo('experience')}>
-              {t('navProjects')}
+              {t('navExperience')}
             </StyledMenu>
 
             <StyledMenu onClick={() => ScrollTo('projects')}>
