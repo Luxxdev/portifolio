@@ -1,0 +1,19 @@
+MELHORAS
+- criar um arquivo de projetos individuais para melhorar a utilização dentro do Projects.tsx <!-- feito --> 
+- ^^ mesma coisa com Experience <!-- feito --> 
+- mudar a animação atrás da pfp
+- melhorar tamanho dos projetos / melhorar toda a aparencia
+- colocar tecnologias usadas nos projetos
+
+TRADUÇÃO
+- finalizar tradução em cada arquivo <!-- feito --> 
+- finalizar os arquivos json com as traduções
+- mudar o download de acordo com a lingua <!-- feito --> 
+- mudar mensagens de contato (email e whatsapp) de acordo com a lingua <!-- feito --> 
+- mudar o altimg de acordo com a lingua?
+
+NÃO IMPLEMENTADO
+- navbar no celular
+- animações
+
+
