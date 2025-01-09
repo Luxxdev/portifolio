@@ -1,8 +1,10 @@
 import { Grid2, styled, Typography } from '@mui/material'
-import placeHolder from '../../../../assets/images/placeHolder.png'
 import Project from '../../../../components/Project/Project'
+import { useTranslation } from 'react-i18next'
+import allProjetcs from '../../../../components/Project/AllProjects'
 
 const Projects = () => {
+  const { t } = useTranslation()
 
   const StyledProjects = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -15,32 +17,21 @@ const Projects = () => {
     <>
       <StyledProjects id="projects">
         <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2} pt={2}>
-          Projects
+          {t('projectsTitle')}
         </Typography>
 
         <Grid2 container spacing={2} display={'flex'} justifyContent={'center'}>
-          <Project
-            name="Projeto 1"
-            image={placeHolder}
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem."
-            buttons={[
-              { label: 'View Project', link: 'https://www.google.com' },
-              { label: 'View Code', link: 'https://www.google.com' },
-            ]}
-          />
-
-          <Project
-            buttons={[
-              { label: 'View Project', link: 'https://www.google.com' },
-              { label: 'View Code', link: 'https://www.google.com' },
-            ]}
-          />
-
-          <Project />
+          {allProjetcs.map(project => (
+            <Project
+              name={t(project.name)}
+              description={t(project.description)}
+              image={project.image}
+              buttons={project.buttons.map(button => ({
+                label: t(button.label),
+                link: button.link
+              }))}
+            />
+          ))}
         </Grid2>
       </StyledProjects >
     </>

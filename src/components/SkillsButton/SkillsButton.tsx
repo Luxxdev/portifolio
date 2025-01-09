@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 interface SkillsButtonProps {
   children: ReactNode
   fixedSizeRatio?: boolean
+
 }
 const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio }) => {
   const SkillsButton = styled('div')(({ theme }) => ({

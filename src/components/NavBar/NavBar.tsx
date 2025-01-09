@@ -45,15 +45,15 @@ const NavBar = () => {
             </StyledMenu>
 
             <StyledMenu onClick={() => ScrollTo('about')}>
-              About
+              {t('navAbout')}
             </StyledMenu>
 
             <StyledMenu onClick={() => ScrollTo('experience')}>
-              Experience
+              {t('navProjects')}
             </StyledMenu>
 
             <StyledMenu onClick={() => ScrollTo('projects')}>
-              Projects
+              {t('navProjects')}
             </StyledMenu>
 
             <LanguageSwitcher />
@@ -66,7 +66,7 @@ const NavBar = () => {
                 Lucas Queirolo
               </Typography>
               <Typography color="primary.contrastText" fontSize={'small'} fontWeight={'lighter'}>
-                Game Developer
+                {t('navRole')}
               </Typography>
             </div>
             <MenuIcon />

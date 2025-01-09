@@ -48,19 +48,11 @@ export const LanguageSwitcher = () => {
   return (
     <LanguageSwitcher>
       <StyledButton
-        key={i18n.language}
         onClick={() => {
-          console.log('mudou')
           i18n.changeLanguage(t('oppositeLanguage'))
         }}
       >
-        <Typography>{i18n.language.toUpperCase()}</Typography>
-        {/* <StyledImg
-              src={languageOptions.flag}
-              style={{
-                height: i18n.language === languageOptions.value ? '2.5em' : '2em',
-                }}
-                /> */}
+        <Typography>{t('oppositeLanguage').toUpperCase()}</Typography>
       </StyledButton>
     </LanguageSwitcher>
   )

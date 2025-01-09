@@ -1,13 +1,16 @@
 import { Box, Container, Grid2, styled, Typography } from '@mui/material'
-import Avatar from '../../../../assets/images/avatar.jpg'
+import Avatar from '../../../../assets/images/avatar.png'
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from '../../../../components/StyledButton/StyledButton'
 import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
-import resume from '../../../../assets/images/LucasQueiroloResume.pdf'
+import resumeEN from '../../../../assets/images/LucasQueirolo_Resume.pdf'
+import resumePT from '../../../../assets/images/LucasQueirolo_Currículo.pdf'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
+import { useTranslation } from 'react-i18next'
 
 const Hero = () => {
+  const { t } = useTranslation()
 
   const StyledHero = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
@@ -26,7 +29,7 @@ const Hero = () => {
 
   const StyledImg = styled('img')(({ theme }) => ({
     borderRadius: '50%',
-    border: `1px solid ${theme.palette.primary.contrastText}`,
+    border: `2px solid ${theme.palette.primary.contrastText}`,
     [theme.breakpoints.up('xs')]: {
       width: '50%',
     },
@@ -56,7 +59,7 @@ const Hero = () => {
                 Lucas Queirolo
               </Typography>
               <Typography color="primary.contrastText" variant="h2" textAlign={'center'} pb={2}>
-                Game Developer
+                {t('heroRole')}
               </Typography>
 
               <Grid2 container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
@@ -64,22 +67,22 @@ const Hero = () => {
                   <StyledButton
                     onClick={() => {
                       const link = document.createElement('a')
-                      link.href = resume
-                      link.download = 'LucasQueiroloResume.pdf'
+                      link.href = t('oppositeLanguage') === 'en' ? resumePT : resumeEN
+                      link.download = t("donwloadLinkName")
                       document.body.appendChild(link)
                       link.click()
                       document.body.removeChild(link)
                     }}
                   >
                     <DownloadIcon />
-                    <Typography>Download</Typography>
+                    <Typography>{t('heroButtonDownload')}</Typography>
                   </StyledButton>
                 </Grid2>
 
                 <Grid2 size={{ xs: 12, md: 4 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton onClick={() => ScrollTo('footer')}>
                     <AlternateEmailIcon />
-                    <Typography>Contact Me</Typography>
+                    <Typography>{t('heroButtonContact')}</Typography>
                   </StyledButton>
                 </Grid2>
               </Grid2>

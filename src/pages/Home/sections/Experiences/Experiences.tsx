@@ -1,9 +1,13 @@
 import { Container, Grid2, styled, Typography } from '@mui/material'
 import Experience from '../../../../components/Experience/Experience'
+import { useTranslation } from 'react-i18next'
+import allExperiences from '../../../../components/Experience/AllExperiences'
 
 
 
 const Experiences = () => {
+    const { t } = useTranslation()
+
     const StyledExperience = styled('div')(({ theme }) => ({
         backgroundColor: theme.palette.primary.light,
         display: 'flex',
@@ -25,22 +29,15 @@ const Experiences = () => {
                     <Grid2 container spacing={2} justifyContent={'center'}>
                         <Grid2 size={{ xs: 12, md: 12 }} paddingBottom={5} justifyContent={'center'}>
                             <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>
-                                Experience
+                                {t('experienceTitle')}
                             </Typography>
                         </Grid2>
-                        <Experience
-                            name='Emprego 1'
-                            date='2021-2022'
-                            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationemLorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationemLorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationemLorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudan tium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.' />
-                        <Experience
-                            name='Emprego 1'
-                            date='2021-2022'
-                            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae cum accusantium inventore porro cupiditate natus atque tempore doloribus? Quae laudantium facere
-                consequuntur ea aliquam reiciendis corrupti, ut maxime quam exercitationem.' />
+                        {allExperiences.map(exp => (
+                            <Experience
+                                name={t(exp.name)}
+                                date={exp.date}
+                                description={t(exp.description)} />
+                        ))}
                     </Grid2>
                 </Container>
             </StyledExperience >
