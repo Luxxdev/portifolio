@@ -1,29 +1,64 @@
-import { AppBar, MenuItem, styled, Toolbar, Typography, useMediaQuery } from '@mui/material'
+import { AppBar, Grid2, MenuItem, styled, Toolbar, Typography, useMediaQuery } from '@mui/material'
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useEffect, useRef, useState } from 'react';
+import Modal from '@mui/material/Modal';
 
 const NavBar = () => {
   const { t } = useTranslation()
 
+  const [mobileMenu, setMobileMenu] = useState(false)
+
   const biggerScreen = useMediaQuery((theme) => theme.breakpoints.up('md'))
+  const timeOutRef = useRef<number | null>(null)
+
+  const toggleMobileMenu = () => {
+    if (timeOutRef.current === null) {
+      setMobileMenu(!mobileMenu)
+      timeOutRef.current = setTimeout(() => {
+        timeOutRef.current = null
+        console.log('can click again')
+      }, 200);
+    }
+  }
+
+  useEffect(() => {
+    if (biggerScreen) {
+      setMobileMenu(false)
+    }
+  }, [biggerScreen])
 
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
+    height: '10vh',
     backgroundColor: theme.palette.primary.dark,
     [theme.breakpoints.up('md')]: {
       justifyContent: 'center',
     },
   }))
 
-  const StyledMenu = styled(MenuItem)(({ theme }) => ({
+  const StyledMobileMenu = styled('div')(({ theme }) => ({
+    justifyContent: 'space-evenly',
+    backdropFilter: 'blur(10px)',
+    opacity: '70%',
+
+    display: 'flex',
+    backgroundColor: theme.palette.primary.light,
+    height: '90vh',
+    minWidth: '100vw',
+    position: 'fixed',
+  }))
+
+  const StyledMenuIcon = styled(MenuItem)(({ theme }) => ({
     color: theme.palette.primary.contrastText,
-    textDecoration: 'none',
     height: '5vh',
-    alignItems: 'center',
     display: 'flex',
     margin: '0px 5vw',
+    textDecoration: 'none',
+
     '&:hover': {
       textDecoration: 'underline',
       cursor: 'pointer',
@@ -37,39 +72,108 @@ const NavBar = () => {
         {biggerScreen ? (
           <StyledToolbar id="navbar">
             <DarkModeToggle />
-
-            <StyledMenu onClick={() => ScrollTo('hero')}>
+            <StyledMenuIcon onClick={() => ScrollTo('hero')} >
               {t('navMain')}
-            </StyledMenu>
+            </StyledMenuIcon>
 
-            <StyledMenu onClick={() => ScrollTo('about')}>
+            <StyledMenuIcon onClick={() => ScrollTo('about')}>
               {t('navAbout')}
-            </StyledMenu>
+            </StyledMenuIcon>
 
-            <StyledMenu onClick={() => ScrollTo('experience')}>
+            <StyledMenuIcon onClick={() => ScrollTo('experience')}>
               {t('navExperience')}
-            </StyledMenu>
+            </StyledMenuIcon>
 
-            <StyledMenu onClick={() => ScrollTo('projects')}>
+            <StyledMenuIcon onClick={() => ScrollTo('projects')}>
               {t('navProjects')}
-            </StyledMenu>
-
+            </StyledMenuIcon>
             <LanguageSwitcher />
           </StyledToolbar>
-
         ) : (
-          <StyledToolbar id="navbar">
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left', padding: '5px' }}>
-              <Typography color="primary.contrastText" fontSize={'large'}>
-                Lucas Queirolo
-              </Typography>
-              <Typography color="primary.contrastText" fontSize={'small'} fontWeight={'lighter'}>
-                {t('navRole')}
-              </Typography>
-            </div>
-            <MenuIcon />
-          </StyledToolbar>
+          <div>
+            <StyledToolbar id="navbar">
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
+                <Typography color="primary.contrastText" fontSize={'large'}>
+                  Lucas Queirolo
+                </Typography>
+                <Typography color="primary.contrastText" fontSize={'small'} fontWeight={'lighter'}>
+                  {t('navRole')}
+                </Typography>
+              </div>
+              <div onClick={() => {
+                toggleMobileMenu()
+              }}>
+                {mobileMenu ? <CloseIcon /> : <MenuIcon />}
+              </div>
+            </StyledToolbar>
+
+
+            <Modal open={mobileMenu} onClose={() => setMobileMenu(false)} sx={{ backdropFilter: 'blur(15px)' }}>
+              <>
+                <StyledToolbar id="navbar">
+                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
+                    <Typography color="primary.contrastText" fontSize={'large'}>
+                      Lucas Queirolo
+                    </Typography>
+                    <Typography color="primary.contrastText" fontSize={'small'} fontWeight={'lighter'}>
+                      {t('navRole')}
+                    </Typography>
+                  </div>
+                  <div onClick={() => {
+                    toggleMobileMenu()
+                  }}>
+                    {mobileMenu ? <CloseIcon /> : <MenuIcon />}
+                  </div>
+                </StyledToolbar>
+
+                <StyledMobileMenu >
+
+                  <Grid2 container display={'flex'} flexDirection={'column'} width={'100%'}>
+                    <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} pt={10} >
+                      <DarkModeToggle />
+                      <LanguageSwitcher />
+                    </Grid2>
+                    <Grid2 size='grow' display={'flex'} flexDirection={'column'} alignSelf={'center'} alignItems={'center'} justifyContent={'space-evenly'} >
+                      <StyledMenuIcon onClick={() => {
+                        ScrollTo('hero')
+                        setMobileMenu(!mobileMenu)
+                      }}>
+                        {t('navMain')}
+                      </StyledMenuIcon>
+
+                      <StyledMenuIcon onClick={() => {
+                        ScrollTo('about')
+                        setMobileMenu(!mobileMenu)
+                      }}>
+                        {t('navAbout')}
+                      </StyledMenuIcon>
+
+                      <StyledMenuIcon onClick={() => {
+                        ScrollTo('experience')
+                        setMobileMenu(!mobileMenu)
+                      }}>
+                        {t('navExperience')}
+                      </StyledMenuIcon>
+
+                      <StyledMenuIcon onClick={() => {
+                        ScrollTo('projects')
+                        setMobileMenu(!mobileMenu)
+                      }}>
+                        {t('navProjects')}
+                      </StyledMenuIcon>
+
+                    </Grid2>
+
+                  </Grid2>
+                </StyledMobileMenu>
+
+              </>
+            </Modal>
+
+
+          </div>
         )}
+
       </AppBar >
     </>
   )

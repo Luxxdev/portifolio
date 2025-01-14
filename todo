@@ -5,6 +5,13 @@ MELHORAS
 - melhorar tamanho dos projetos / melhorar toda a aparencia
 - colocar tecnologias usadas nos projetos
 - melhorar o tamanho do StyledButton
+- ajeitar menu da navbar em mobile
+- melhorar loading de imagem
+- doubleclick rapido no botao de menu do celular faz o menu abrir e fechar ao mesmo tempo <!-- feito --> 
+- doubleclick no darkmode e translate
+- refatorar navbar pra evitar repetição de codigo dentro do modal
+- posição e tamanho language switcher e darkmode
+
 
 TRADUÇÃO
 - finalizar tradução em cada arquivo <!-- feito --> 

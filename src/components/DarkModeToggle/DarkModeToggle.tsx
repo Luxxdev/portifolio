@@ -12,9 +12,10 @@ const DarkModeToggle = () => {
     textDecoration: 'none',
     alignItems: 'center',
     position: 'relative',
+    fontSize: '5vh',
     [theme.breakpoints.up('md')]: {
       position: 'absolute',
-      top: '1.5vh',
+      top: '2.5vh',
       right: '30px',
     },
     display: 'flex',
@@ -26,7 +27,7 @@ const DarkModeToggle = () => {
 
   return (
     <StyledA onClick={toggleTheme}>
-      {theme.palette.mode === 'dark' ? <LightModeOutlinedIcon fontSize='large' /> : <DarkModeOutlinedIcon fontSize='large' />}
+      {theme.palette.mode === 'dark' ? <LightModeOutlinedIcon fontSize='inherit' /> : <DarkModeOutlinedIcon fontSize='inherit' />}
     </StyledA>
   )
 }

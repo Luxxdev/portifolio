@@ -49,7 +49,7 @@ const Hero = () => {
                   <AnimatedBackground />
                 </Box>
                 <Box position={'relative'} textAlign={'center'}>
-                  <StyledImg src={Avatar} />
+                  <StyledImg src={Avatar} loading='lazy' />
                 </Box>
               </Box>
             </Grid2>
