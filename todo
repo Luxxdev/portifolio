@@ -4,14 +4,12 @@ MELHORAS
 - mudar a animação atrás da pfp
 - melhorar tamanho dos projetos / melhorar toda a aparencia
 - colocar tecnologias usadas nos projetos
-- melhorar o tamanho do StyledButton
-- ajeitar menu da navbar em mobile
-- melhorar loading de imagem
-- doubleclick rapido no botao de menu do celular faz o menu abrir e fechar ao mesmo tempo <!-- feito --> 
-- doubleclick no darkmode e translate
+- melhorar o tamanho do StyledButton <!-- feito -->
+- ajeitar menu da navbar em mobile <!-- feito -->
+- melhorar loading de imagem <!-- feito -->
 - refatorar navbar pra evitar repetição de codigo dentro do modal
 - posição e tamanho language switcher e darkmode
-
+- checar cor do texto quando a imagem do hero esta no fundo no menu mobile
 
 TRADUÇÃO
 - finalizar tradução em cada arquivo <!-- feito --> 
@@ -20,9 +18,24 @@ TRADUÇÃO
 - mudar mensagens de contato (email e whatsapp) de acordo com a lingua <!-- feito --> 
 
 NÃO IMPLEMENTADO
-- projetos
-- experiencias
-- navbar no celular
+- preencher projetos
+- preencher experiencias
+- navbar no celular <!-- feito --> 
+- mobile menu <!-- feito --> 
 - animações
 
+CHECAR SE O PROBLEMA ERA O TOUCH SIMULATOR NO NAVEGADOR
+- doubleclick rapido no botao de menu do celular faz o menu abrir e fechar ao mesmo tempo <!-- feito --> 
+- doubleclick no darkmode e translate <!-- feito --> 
+- solução caso necessário:
+  // const timeOutRef = useRef<number | null>(null)
 
+  // const toggleMobileMenu = () => {
+  //   if (timeOutRef.current === null) {
+  //     setMobileMenu(!mobileMenu)
+  //     timeOutRef.current = setTimeout(() => {
+  //       timeOutRef.current = null
+  //       console.log('can click again')
+  //     }, 200);
+  //   }
+  // }

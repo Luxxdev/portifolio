@@ -1,5 +1,6 @@
 import { Box, Container, Grid2, styled, Typography } from '@mui/material'
-import Avatar from '../../../../assets/images/avatar.png'
+import Avatar from '../../../../assets/images/Avatar.png'
+
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from '../../../../components/StyledButton/StyledButton'
@@ -30,6 +31,7 @@ const Hero = () => {
   const StyledImg = styled('img')(({ theme }) => ({
     borderRadius: '50%',
     border: `2px solid ${theme.palette.primary.contrastText}`,
+    filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
     [theme.breakpoints.up('xs')]: {
       width: '50%',
     },
