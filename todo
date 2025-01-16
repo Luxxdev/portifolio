@@ -7,9 +7,10 @@ MELHORAS
 - melhorar o tamanho do StyledButton <!-- feito -->
 - ajeitar menu da navbar em mobile <!-- feito -->
 - melhorar loading de imagem <!-- feito -->
-- refatorar navbar pra evitar repetição de codigo dentro do modal
-- posição e tamanho language switcher e darkmode
-- checar cor do texto quando a imagem do hero esta no fundo no menu mobile
+- refatorar navbar pra evitar repetição de codigo dentro do modal <!-- feito -->
+- posição e tamanho language switcher e darkmode <!-- feito -->
+- checar cor do texto quando a imagem do hero esta no fundo no menu mobile <!-- feito -->
+- tentar pegar tamanho da styledtoolbar pra não precisar usar valores fixos no modal
 
 TRADUÇÃO
 - finalizar tradução em cada arquivo <!-- feito --> 

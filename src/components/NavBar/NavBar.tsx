@@ -7,37 +7,26 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useEffect, useState } from 'react';
 import Modal from '@mui/material/Modal';
 
-
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-  justifyContent: 'space-between',
-  height: '10vh',
-  backgroundColor: theme.palette.primary.dark,
-  [theme.breakpoints.up('md')]: {
-    justifyContent: 'center',
-  },
-}))
+const toolbarHeight = 10
 
 const StyledMobileMenu = styled(Modal)(({ }) => ({
-  justifyContent: 'space-evenly',
   backdropFilter: 'blur(15px)',
-  top: '10vh',
+  top: `${toolbarHeight}vh`,
   display: 'flex',
-  height: '90vh',
+  justifyContent: 'space-between',
+  height: `calc(100vh - ${toolbarHeight}vh)`,
   minWidth: '100vw',
   position: 'fixed',
 }))
 
 const StyledMenuIcon = styled(MenuItem)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
-  height: '5vh',
-  display: 'flex',
   margin: '0px 5vw',
   textDecoration: 'none',
   '&:hover': {
     backdropFilter: 'blur(15px)',
     textDecoration: 'underline',
     cursor: 'pointer',
-
   },
 }))
 
@@ -59,25 +48,46 @@ const NavBar = () => {
     }
   }, [bigScreen])
 
+  const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+    justifyContent: 'space-between',
+    height: `${toolbarHeight}vh`,
+    backgroundColor: theme.palette.primary.dark,
+    '& > div': {
+      display: 'flex',
+      flexDirection: bigScreen ? 'row' : 'column',
+    }
+  }))
+
+  function MapMenuItems() {
+    return navLinks.map(link => (
+      <StyledMenuIcon onClick={() => {
+        ScrollTo(link.id)
+        setMobileMenu(false)
+      }} >
+        <Typography fontSize={'large'}>
+          {t(link.label)}
+        </Typography>
+      </StyledMenuIcon>
+    ))
+  }
+
   return (
     <>
       <AppBar position="sticky">
-        {bigScreen ? (
-          <StyledToolbar id="navbar">
-            <DarkModeToggle />
-            {
-              navLinks.map(link => (
-                <StyledMenuIcon onClick={() => ScrollTo(link.id)} >
-                  {t(link.label)}
-                </StyledMenuIcon>
-              ))
-            }
-            <LanguageSwitcher />
-          </StyledToolbar>
-        ) : (
-          <>
-            <StyledToolbar id="navbar">
-              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
+        <StyledToolbar id="navbar">
+          {bigScreen ? (
+            <>
+              <DarkModeToggle />
+              <div>
+                {
+                  MapMenuItems()
+                }
+              </div>
+              <LanguageSwitcher />
+            </>
+          ) : (
+            <>
+              <div>
                 <Typography color="primary.contrastText" fontSize={'large'}>
                   Lucas Queirolo
                 </Typography>
@@ -90,40 +100,29 @@ const NavBar = () => {
               }}>
                 {mobileMenu ? <CloseIcon /> : <MenuIcon />}
               </div>
-            </StyledToolbar>
+            </>
+          )}
+        </StyledToolbar>
 
-
-            <StyledMobileMenu open={mobileMenu} onClose={() => setMobileMenu(false)} >
-              <Grid2 container display={'flex'} flexDirection={'column'} width={'100%'}>
-                <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} pt={10} >
-                  <DarkModeToggle />
-                  <LanguageSwitcher />
-                </Grid2>
-                <Grid2 size='grow' display={'flex'} flexDirection={'column'} alignSelf={'center'} alignItems={'center'} justifyContent={'space-evenly'} >
-                  {
-                    navLinks.map(link => (
-                      <StyledMenuIcon onClick={() => {
-                        ScrollTo(link.id)
-                        setMobileMenu(!mobileMenu)
-                      }} >
-                        <Typography fontSize={'large'} fontWeight={'600'}>
-
-                          {t(link.label)}
-                        </Typography>
-                      </StyledMenuIcon>
-                    ))
-                  }
-                </Grid2>
-              </Grid2>
-            </StyledMobileMenu>
-
-          </>
-        )}
-
+        <StyledMobileMenu open={mobileMenu} onClose={() => setMobileMenu(false)} >
+          <Grid2 container display={'flex'} flexDirection={'column'} width={'100%'}>
+            <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} pt={10} >
+              <DarkModeToggle />
+              <LanguageSwitcher />
+            </Grid2>
+            <Grid2 size='grow' display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'space-evenly'} >
+              {
+                MapMenuItems()
+              }
+            </Grid2>
+          </Grid2>
+        </StyledMobileMenu>
       </AppBar >
     </>
   )
 }
+
+
 
 export function ScrollTo(sectionId: string) {
   const section = document.getElementById(sectionId)

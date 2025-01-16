@@ -13,11 +13,11 @@ const DarkModeToggle = () => {
     alignItems: 'center',
     position: 'relative',
     fontSize: '5vh',
-    [theme.breakpoints.up('md')]: {
-      position: 'absolute',
-      top: '2.5vh',
-      right: '30px',
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   position: 'absolute',
+    //   top: '2.5vh',
+    //   right: '30px',
+    // },
     display: 'flex',
     '&:hover': {
       transform: 'scale(1.2)',

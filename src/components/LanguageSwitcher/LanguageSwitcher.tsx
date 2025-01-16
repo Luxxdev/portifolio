@@ -34,11 +34,11 @@ export const LanguageSwitcher = () => {
     display: 'flex',
     aspectRatio: 1 / 1,
     position: 'relative',
-    [theme.breakpoints.up('md')]: {
-      position: 'absolute',
-      top: '2.5vh',
-      left: '30px',
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   position: 'absolute',
+    //   top: '2.5vh',
+    //   left: '30px',
+    // },
     alignItems: 'center',
     justifyContent: 'center',
     '&:hover': {
