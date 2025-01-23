@@ -1,5 +1,5 @@
 import { Box, Container, Grid2, styled, Typography } from '@mui/material'
-import Avatar from '../../../../assets/images/Avatar.png'
+import avatar from '../../../../assets/images/Avatar.png'
 
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
@@ -51,7 +51,7 @@ const Hero = () => {
                   <AnimatedBackground />
                 </Box>
                 <Box position={'relative'} textAlign={'center'}>
-                  <StyledImg src={Avatar} loading='lazy' />
+                  <StyledImg src={avatar} loading='lazy' />
                 </Box>
               </Box>
             </Grid2>
