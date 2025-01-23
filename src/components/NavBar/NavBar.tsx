@@ -14,7 +14,7 @@ const StyledMobileMenu = styled(Modal)(({ }) => ({
   top: `${toolbarHeight}dvh`,
   display: 'flex',
   justifyContent: 'space-between',
-  height: `calc(100vh - ${toolbarHeight}vh)`,
+  height: `calc(100dvh - ${toolbarHeight}dvh)`,
   minWidth: '100vw',
   position: 'fixed',
 }))
