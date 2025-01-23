@@ -52,6 +52,7 @@ const NavBar = () => {
     justifyContent: 'space-between',
     height: `${toolbarHeight}vh`,
     backgroundColor: theme.palette.primary.dark,
+    overflow: 'hidden',
     '& > div': {
       display: 'flex',
       flexDirection: bigScreen ? 'row' : 'column',

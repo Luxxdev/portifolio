@@ -23,6 +23,10 @@ MELHORAS
 - mudar a animação atrás da pfp
 - melhorar tamanho dos projetos / melhorar toda a aparencia
 - scroll no texto do projeto
+- habilidades não estao centralizadas no mobile
+- espaço preto em cima da navbar no mobile(tem a ver com a barra de endereço aparecendo, que também quebra o tamanho de 100vh, fazendo o menu mobile ser menor que a tela) 
+- menu mobile levemente maior que a tela, mostrnado linhas brancas em cima e na direita ao mover
+
 
 NÃO IMPLEMENTADO
 - preencher projetos

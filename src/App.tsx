@@ -1,4 +1,4 @@
-import { CssBaseline, ThemeProvider } from '@mui/material'
+import { ThemeProvider } from '@mui/material'
 import Home from './pages/Home/Home'
 import { useThemeContext } from './components/ThemeContextProvider/ThemeContextProvider'
 
@@ -8,7 +8,6 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
         <Home />
       </ThemeProvider>
     </>
