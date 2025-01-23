@@ -11,7 +11,7 @@ const toolbarHeight = 10
 
 const StyledMobileMenu = styled(Modal)(({ }) => ({
   backdropFilter: 'blur(15px)',
-  top: `${toolbarHeight}vh`,
+  top: `${toolbarHeight}dvh`,
   display: 'flex',
   justifyContent: 'space-between',
   height: `calc(100vh - ${toolbarHeight}vh)`,
@@ -50,7 +50,7 @@ const NavBar = () => {
 
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
-    height: `${toolbarHeight}vh`,
+    height: `${toolbarHeight}dvh`,
     backgroundColor: theme.palette.primary.dark,
     overflow: 'hidden',
     '& > div': {
