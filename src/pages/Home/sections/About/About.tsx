@@ -1,9 +1,9 @@
 import { Container, Grid2, styled, Typography } from '@mui/material'
-import SkillsButton from '../../../../components/SkillsButton/SkillsButton'
+import SkillsButton from '../../../../components/SkillsTag/SkillsTag'
 import SchoolIcon from '@mui/icons-material/School'
 import { useTranslation } from 'react-i18next'
 
-const skills = ["HTML", "CSS", "Javascript", "React", "Typescript", "Git", "Python", "PowerBI"]
+const skills = ["HTML", "CSS", "Javascript", "React", "Typescript", "Git", "Python", "C#", 'C++', 'SQL', 'GDScript', 'Game Design', 'Level Design', "Narrative Design", 'Unreal Engine', 'Godot Engine', 'Unity Engine',]
 
 const About = () => {
 
@@ -50,9 +50,9 @@ const About = () => {
             </Grid2>
 
             {skills.map(skill => (
-              <Grid2 size={{ xs: 4, md: 3 }} display="flex" justifyContent="center">
+              <Grid2 size='auto' display="block" justifyContent="center">
                 <SkillsButton>
-                  <Typography>{t(skill)}</Typography>
+                  <Typography noWrap={true} textAlign={'center'}>{t(skill)}</Typography>
                 </SkillsButton>
               </Grid2>
             ))}

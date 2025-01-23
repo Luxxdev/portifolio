@@ -1,42 +1,47 @@
-MELHORAS
+<!-- FEITOS -->
 - criar um arquivo de projetos individuais para melhorar a utilização dentro do Projects.tsx <!-- feito --> 
 - ^^ mesma coisa com Experience <!-- feito --> 
-- mudar a animação atrás da pfp
-- melhorar tamanho dos projetos / melhorar toda a aparencia
-- colocar tecnologias usadas nos projetos
+- colocar tecnologias usadas nos projetos <!-- feito -->
 - melhorar o tamanho do StyledButton <!-- feito -->
 - ajeitar menu da navbar em mobile <!-- feito -->
 - melhorar loading de imagem <!-- feito -->
 - refatorar navbar pra evitar repetição de codigo dentro do modal <!-- feito -->
 - posição e tamanho language switcher e darkmode <!-- feito -->
 - checar cor do texto quando a imagem do hero esta no fundo no menu mobile <!-- feito -->
-- tentar pegar tamanho da styledtoolbar pra não precisar usar valores fixos no modal
-
-TRADUÇÃO
+- tentar pegar tamanho da styledtoolbar pra não precisar usar valores fixos no modal <!-- feito -->
 - finalizar tradução em cada arquivo <!-- feito --> 
 - finalizar os arquivos json com as traduções <!-- feito --> 
 - mudar o download de acordo com a lingua <!-- feito --> 
 - mudar mensagens de contato (email e whatsapp) de acordo com a lingua <!-- feito --> 
+- navbar no celular <!-- feito --> 
+- mobile menu <!-- feito --> 
+- doubleclick rapido no botao de menu do celular faz o menu abrir e fechar ao mesmo tempo <!-- feito --> 
+- doubleclick no darkmode e translate <!-- feito --> 
+
+
+MELHORAS
+- mudar a animação atrás da pfp
+- melhorar tamanho dos projetos / melhorar toda a aparencia
+- scroll no texto do projeto
 
 NÃO IMPLEMENTADO
 - preencher projetos
 - preencher experiencias
-- navbar no celular <!-- feito --> 
-- mobile menu <!-- feito --> 
+
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+- ENTREGAR CURRICULO
+
+
 - animações
 
-CHECAR SE O PROBLEMA ERA O TOUCH SIMULATOR NO NAVEGADOR
-- doubleclick rapido no botao de menu do celular faz o menu abrir e fechar ao mesmo tempo <!-- feito --> 
-- doubleclick no darkmode e translate <!-- feito --> 
-- solução caso necessário:
-  // const timeOutRef = useRef<number | null>(null)
-
-  // const toggleMobileMenu = () => {
-  //   if (timeOutRef.current === null) {
-  //     setMobileMenu(!mobileMenu)
-  //     timeOutRef.current = setTimeout(() => {
-  //       timeOutRef.current = null
-  //       console.log('can click again')
-  //     }, 200);
-  //   }
-  // }

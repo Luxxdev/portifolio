@@ -6,25 +6,6 @@ import { styled, Typography } from '@mui/material'
 export const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation()
 
-  const LanguageSwitcher = styled('div')(({ }) => ({
-    // [theme.breakpoints.up('xs')]: {
-    // position: 'relative',
-    // },
-    // [theme.breakpoints.up('md')]: {
-    //   position: 'absolute',
-    //   top: '5px',
-    //   right: '5px',
-    // },
-  }))
-  //   const StyledImg = styled('img')(({  }) => ({
-  //     [theme.breakpoints.up('xs')]: {
-  //       height: '2em',
-  //     },
-  //     [theme.breakpoints.up('md')]: {
-  //       height: '2em',
-  //     },
-  //   }))
-
   const StyledButton = styled('button')(({ theme }) => ({
     backgroundColor: 'transparent',
     border: `1px solid ${theme.palette.primary.contrastText}`,
@@ -34,11 +15,6 @@ export const LanguageSwitcher = () => {
     display: 'flex',
     aspectRatio: 1 / 1,
     position: 'relative',
-    // [theme.breakpoints.up('md')]: {
-    //   position: 'absolute',
-    //   top: '2.5vh',
-    //   left: '30px',
-    // },
     alignItems: 'center',
     justifyContent: 'center',
     '&:hover': {
@@ -49,7 +25,7 @@ export const LanguageSwitcher = () => {
   }))
 
   return (
-    <LanguageSwitcher>
+    <div>
       <StyledButton
         onClick={() => {
           i18n.changeLanguage(t('oppositeLanguage'))
@@ -57,6 +33,6 @@ export const LanguageSwitcher = () => {
       >
         <Typography>{t('oppositeLanguage').toUpperCase()}</Typography>
       </StyledButton>
-    </LanguageSwitcher>
+    </div>
   )
 }

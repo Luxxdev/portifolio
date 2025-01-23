@@ -16,21 +16,24 @@ const Projects = () => {
   return (
     <>
       <StyledProjects id="projects">
-        <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2} pt={2}>
+        <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={10} pt={2}>
           {t('projectsTitle')}
         </Typography>
 
-        <Grid2 container spacing={2} display={'flex'} justifyContent={'center'}>
+        <Grid2 container display={'flex'} justifyContent={'center'} spacing={10}>
           {allProjetcs.map(project => (
-            <Project
-              name={t(project.name)}
-              description={t(project.description)}
-              image={project.image}
-              buttons={project.buttons.map(button => ({
-                label: t(button.label),
-                link: button.link
-              }))}
-            />
+            <Grid2 size='auto' textAlign="center" border={1} borderColor={"primary.contrastText"} >
+              <Project
+                name={t(project.name)}
+                description={t(project.description)}
+                image={project.image}
+                buttons={project.buttons?.map(button => ({
+                  label: t(button.label),
+                  link: button.link
+                }))}
+                techs={project.techs?.map(tech => (t(tech)))}
+              />
+            </Grid2>
           ))}
         </Grid2>
       </StyledProjects >
