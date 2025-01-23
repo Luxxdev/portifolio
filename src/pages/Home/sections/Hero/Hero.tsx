@@ -1,5 +1,5 @@
 import { Box, Container, Grid2, styled, Typography } from '@mui/material'
-import avatar from '../../../../assets/images/Avatar.png'
+import avatar from '../../../../assets/images/avatar.png'
 
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
