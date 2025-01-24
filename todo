@@ -1,4 +1,4 @@
-<!-- FEITOS -->
+-- FEITOS --
 - criar um arquivo de projetos individuais para melhorar a utilização dentro do Projects.tsx <!-- feito --> 
 - ^^ mesma coisa com Experience <!-- feito --> 
 - colocar tecnologias usadas nos projetos <!-- feito -->
@@ -17,13 +17,13 @@
 - mobile menu <!-- feito --> 
 - doubleclick rapido no botao de menu do celular faz o menu abrir e fechar ao mesmo tempo <!-- feito --> 
 - doubleclick no darkmode e translate <!-- feito --> 
+- habilidades não estao centralizadas no mobile -- feito
 
 
 MELHORAS
 - mudar a animação atrás da pfp
 - melhorar tamanho dos projetos / melhorar toda a aparencia
-- scroll no texto do projeto
-- habilidades não estao centralizadas no mobile
+- scroll no texto do projeto 
 - espaço preto em cima da navbar no mobile(tem a ver com a barra de endereço aparecendo, que também quebra o tamanho de 100vh, fazendo o menu mobile ser menor que a tela) 
 - menu mobile levemente maior que a tela, mostrnado linhas brancas em cima e na direita ao mover
 

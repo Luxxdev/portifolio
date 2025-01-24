@@ -7,7 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useEffect, useState } from 'react';
 import Modal from '@mui/material/Modal';
 
-const toolbarHeight = 10
+export const toolbarHeight = 10
 
 const StyledMobileMenu = styled(Modal)(({ }) => ({
   backdropFilter: 'blur(15px)',
@@ -123,12 +123,9 @@ const NavBar = () => {
   )
 }
 
-
-
 export function ScrollTo(sectionId: string) {
   const section = document.getElementById(sectionId)
   const nav = document.getElementById('navbar')
-  console.log(section?.scrollHeight)
   if (section?.offsetTop != null && nav?.offsetHeight != null) {
     window.scrollTo({ top: section?.offsetTop - nav?.offsetHeight, behavior: 'smooth' })
   }

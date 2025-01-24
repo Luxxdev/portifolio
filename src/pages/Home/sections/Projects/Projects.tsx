@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <>
       <StyledProjects id="projects">
-        <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={10} pt={2}>
+        <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={10} >
           {t('projectsTitle')}
         </Typography>
 

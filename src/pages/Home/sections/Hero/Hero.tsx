@@ -9,6 +9,7 @@ import resumeEN from '../../../../assets/images/LucasQueirolo_Resume.pdf'
 import resumePT from '../../../../assets/images/LucasQueirolo_Currículo.pdf'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
 import { useTranslation } from 'react-i18next'
+import { toolbarHeight } from '../../../../components/NavBar/NavBar'
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -16,18 +17,11 @@ const Hero = () => {
   const StyledHero = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
     display: 'flex',
-    minHeight: '100vh',
+    marginTop: `${toolbarHeight}dvh`,
+    minHeight: `calc(100dvh - ${toolbarHeight}dvh)`,
     alignItems: 'center',
     paddingBottom: '50px',
     width: '100%',
-
-    // [theme.breakpoints.up('xs')]: {
-    //   paddingBottom: '75px',
-    //   paddingTop: '-75px',
-    // },
-    // [theme.breakpoints.up('md')]: {
-    //   paddingTop: '0',
-    // },
   }))
 
   const StyledImg = styled('img')(({ theme }) => ({
@@ -46,7 +40,7 @@ const Hero = () => {
     <>
       <StyledHero id="hero">
         <Container maxWidth={'lg'} >
-          <Grid2 container spacing={2} alignItems={'center'}>
+          <Grid2 container spacing={2} alignItems={'center'} marginTop={5}>
             <Grid2 size={{ xs: 12, md: 5 }}>
               <Box position={'relative'}>
                 <Box position={'absolute'} width={'100%'} top={-100} right={0}>
@@ -62,7 +56,7 @@ const Hero = () => {
 
               <Grid2 container display={'flex'} justifyContent={'center'}>
                 <Grid2 size={{ xs: 12, md: 12 }} display={'flex'} justifyContent={'center'}>
-                  <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={5} pt={{ xs: 5, md: 0 }}>
+                  <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={5} pt={{ xs: 2, md: 0 }}>
                     Lucas Queirolo
                   </Typography>
                 </Grid2>

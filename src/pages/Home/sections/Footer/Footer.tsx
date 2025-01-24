@@ -43,7 +43,7 @@ const Footer = () => {
     <>
       <StyledFooter id="footer">
         <Container>
-          <Typography variant="h3" textAlign={'center'} paddingBottom={'75px'}>
+          <Typography variant="h2" textAlign={'center'} paddingBottom={'75px'}>
             {t('footerContact')}
           </Typography>
           <Grid2 container spacing={5}>
@@ -65,12 +65,6 @@ const Footer = () => {
                 <StyledTypography>+55 (21) 99989-4540</StyledTypography>
               </StyledLink>
             </Grid2>
-            {/* <Grid2 size={{ xs: 12, md: 3 }} paddingBottom={3}>
-              <StyledLink href="https://github.com/Luxxdev" target="_blank" rel="noopener noreferrer">
-                <GitHubIcon />
-                <Typography variant="h6">/Luxxdev</Typography>
-              </StyledLink>
-            </Grid2> */}
           </Grid2>
           <Typography fontSize={'small'} fontWeight={'lighter'} paddingBottom={'10px'} paddingTop={'75px'} textAlign={'center'}>
             {t("footerRights")}

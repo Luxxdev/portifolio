@@ -15,23 +15,15 @@ const Experiences = () => {
         paddingBottom: '50px',
         paddingTop: '50px',
         width: '100%',
-
-
-        // [theme.breakpoints.up('xs')]: {
-        //     alignItems: 'flex-start',
-        // },
-        // [theme.breakpoints.up('md')]: {
-        //     alignItems: 'center',
-        // },
     }))
 
     return (
         <>
             <StyledExperience id='experience'>
                 <Container maxWidth="lg">
-                    <Grid2 container spacing={2} justifyContent={'center'}>
-                        <Grid2 size={{ xs: 12, md: 12 }} paddingBottom={5} justifyContent={'center'}>
-                            <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>
+                    <Grid2 container spacing={2} justifyContent={'center'} >
+                        <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'}>
+                            <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={5}>
                                 {t('experienceTitle')}
                             </Typography>
                         </Grid2>

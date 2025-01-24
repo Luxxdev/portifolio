@@ -17,7 +17,7 @@ const Experience: React.FC<expProps> = ({ name, date, description }) => {
     }))
     return (
         <>
-            <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'} border={1} borderColor={'"primary.contrastText"'} margin={5}  >
+            <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'} border={1} borderColor={'"primary.contrastText"'} margin={2}  >
                 <StyledExperience>
                     <Typography color="primary.contrastText" variant="h4" fontWeight={'lighter'} textAlign="left" pb={1}>
                         {name}
