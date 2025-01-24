@@ -11,6 +11,8 @@ const Projects = () => {
     minHeight: '100vh',
     paddingBottom: '50px',
     paddingTop: '50px',
+    width: '100%',
+
   }))
 
   return (

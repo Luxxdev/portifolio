@@ -13,14 +13,13 @@ const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio })
     padding: '15px 15px',
     minWidth: 'fit-content',
     width: fixedSizeRatio ? 'fit-content' : '100%',
-    margin: fixedSizeRatio ? '0px' : '20px',
+    // margin: fixedSizeRatio ? '0px' : '20px',
     aspectRatio: fixedSizeRatio ? 1 / 1 : 'auto',
     color: theme.palette.primary.contrastText,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '5px',
   }))
 
   return (

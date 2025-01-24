@@ -14,6 +14,8 @@ const Footer = () => {
     color: theme.palette.primary.contrastText,
     justifyContent: 'space-evenly',
     paddingTop: '50px',
+    width: '100%',
+
     // paddingBottom: '50px',
   }))
 

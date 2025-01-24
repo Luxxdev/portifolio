@@ -16,15 +16,16 @@ const About = () => {
     minHeight: '100vh',
     paddingBottom: '50px',
     paddingTop: '50px',
+    width: '100%',
   }))
 
   return (
     <>
       <StyledAbout id="about">
         <Container maxWidth="lg">
-          <Grid2 container spacing={2} justifyContent={'center'}>
-            <Grid2 size={{ xs: 12, md: 12 }} paddingBottom={5} justifyContent={'center'}>
-              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>
+          <Grid2 container spacing={2} justifyContent={'center'} pb={2}>
+            <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'}>
+              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={5}>
                 {t('aboutTitle')}
               </Typography>
             </Grid2>
@@ -43,14 +44,14 @@ const About = () => {
               </Typography>
             </Grid2>
             <Grid2 size={{ xs: 12, md: 12 }} marginTop={5}>
-              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={2}>
+              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={5}>
                 {t('skillsTitle')}
 
               </Typography>
             </Grid2>
 
             {skills.map(skill => (
-              <Grid2 size='auto' display="block" justifyContent="center">
+              <Grid2 size='auto' display="flex" justifyContent="center">
                 <SkillsButton>
                   <Typography noWrap={true} textAlign={'center'}>{t(skill)}</Typography>
                 </SkillsButton>

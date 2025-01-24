@@ -14,6 +14,9 @@ const Experiences = () => {
         minHeight: '100vh',
         paddingBottom: '50px',
         paddingTop: '50px',
+        width: '100%',
+
+
         // [theme.breakpoints.up('xs')]: {
         //     alignItems: 'flex-start',
         // },

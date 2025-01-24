@@ -19,6 +19,8 @@ const Hero = () => {
     minHeight: '100vh',
     alignItems: 'center',
     paddingBottom: '50px',
+    width: '100%',
+
     // [theme.breakpoints.up('xs')]: {
     //   paddingBottom: '75px',
     //   paddingTop: '-75px',
