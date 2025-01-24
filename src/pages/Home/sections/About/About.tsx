@@ -3,7 +3,7 @@ import SkillsButton from '../../../../components/SkillsTag/SkillsTag'
 import SchoolIcon from '@mui/icons-material/School'
 import { useTranslation } from 'react-i18next'
 
-const skills = ["HTML", "CSS", "Javascript", "React", "Typescript", "Git", "Python", "C#", 'C++', 'SQL', 'GDScript', 'Game Design', 'Level Design', "Narrative Design", 'Unreal Engine', 'Godot Engine', 'Unity Engine',]
+const skills = ["HTML", "CSS", "Javascript", "React", "Typescript", "Git", "Python", "Selenium", "C#", 'C++', 'SQL', 'GDScript', 'Game Design', 'Level Design', "Narrative Design", 'Unreal Engine', 'Godot Engine', 'Unity Engine',]
 
 const About = () => {
 
@@ -51,7 +51,7 @@ const About = () => {
             </Grid2>
 
             {skills.map(skill => (
-              <Grid2 size='auto' display="flex" justifyContent="center">
+              <Grid2 size='auto' display="flex" justifyContent="center" margin={'5px 5px'}>
                 <SkillsButton>
                   <Typography noWrap={true} textAlign={'center'}>{t(skill)}</Typography>
                 </SkillsButton>

@@ -4,7 +4,7 @@ import avatar from '../../../../assets/images/avatar.png'
 import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from '../../../../components/StyledButton/StyledButton'
-import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
+// import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
 import resumeEN from '../../../../assets/images/LucasQueirolo_Resume.pdf'
 import resumePT from '../../../../assets/images/LucasQueirolo_Currículo.pdf'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
@@ -43,9 +43,9 @@ const Hero = () => {
           <Grid2 container spacing={2} alignItems={'center'} marginTop={5}>
             <Grid2 size={{ xs: 12, md: 5 }}>
               <Box position={'relative'}>
-                <Box position={'absolute'} width={'100%'} top={-100} right={0}>
+                {/* <Box position={'absolute'} width={'100%'} top={-100} right={0}>
                   <AnimatedBackground />
-                </Box>
+                </Box> */}
                 <Box position={'relative'} textAlign={'center'}>
                   <StyledImg src={avatar} loading='lazy' />
                 </Box>

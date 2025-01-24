@@ -24,18 +24,16 @@ const Projects = () => {
 
         <Grid2 container display={'flex'} justifyContent={'center'} spacing={10}>
           {allProjetcs.map(project => (
-            <Grid2 size='auto' textAlign="center" border={1} borderColor={"primary.contrastText"} >
-              <Project
-                name={t(project.name)}
-                description={t(project.description)}
-                image={project.image}
-                buttons={project.buttons?.map(button => ({
-                  label: t(button.label),
-                  link: button.link
-                }))}
-                techs={project.techs?.map(tech => (t(tech)))}
-              />
-            </Grid2>
+            <Project
+              name={t(project.name)}
+              description={t(project.description)}
+              image={project.image}
+              buttons={project.buttons?.map(button => ({
+                label: t(button.label),
+                link: button.link
+              }))}
+              techs={project.techs?.map(tech => (t(tech)))}
+            />
           ))}
         </Grid2>
       </StyledProjects >
