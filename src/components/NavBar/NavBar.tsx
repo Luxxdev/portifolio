@@ -17,6 +17,7 @@ const StyledMobileMenu = styled(Modal)(({ }) => ({
   height: `calc(100dvh - ${toolbarHeight}dvh)`,
   width: '100dvw',
   position: 'fixed',
+  overflow: 'hidden',
 }))
 
 const StyledMenuIcon = styled(MenuItem)(({ theme }) => ({
@@ -105,20 +106,21 @@ const NavBar = () => {
           )}
         </StyledToolbar>
 
-        <StyledMobileMenu open={mobileMenu} onClose={() => setMobileMenu(false)} >
-          <Grid2 container display={'flex'} flexDirection={'column'} width={'100%'}>
-            <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} pt={10} >
+      </AppBar >
+
+      <StyledMobileMenu open={mobileMenu} onClose={() => setMobileMenu(false)} >
+        <Grid2 container display={'flex'} flexDirection={'column'} width={'100%'} >
+          <Grid2 size='grow' display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'space-evenly'} >
+            <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} gap={10}>
               <DarkModeToggle />
               <LanguageSwitcher />
             </Grid2>
-            <Grid2 size='grow' display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'space-evenly'} >
-              {
-                MapMenuItems()
-              }
-            </Grid2>
+            {
+              MapMenuItems()
+            }
           </Grid2>
-        </StyledMobileMenu>
-      </AppBar >
+        </Grid2>
+      </StyledMobileMenu>
     </>
   )
 }
