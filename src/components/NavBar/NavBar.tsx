@@ -15,7 +15,7 @@ const StyledMobileMenu = styled(Modal)(({ }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   height: `calc(100dvh - ${toolbarHeight}dvh)`,
-  minWidth: '100vw',
+  width: '100dvw',
   position: 'fixed',
 }))
 
@@ -74,7 +74,7 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar position="fixed">
         <StyledToolbar id="navbar">
           {bigScreen ? (
             <>
