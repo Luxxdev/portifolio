@@ -49,53 +49,51 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
 
   return (
     <>
-      <Grid2 display={'flex'} alignItems={'space-around'}>
-        <StyledProject>
-          <ImageContainer >
-            <img src={image} loading='lazy' />
-          </ImageContainer>
+      <StyledProject>
+        <ImageContainer >
+          <img src={image} loading='lazy' />
+        </ImageContainer>
 
-          <Typography color="primary.contrastText" variant="h3" fontWeight={'light'} textAlign="center" mt={'2vh'}>
-            {name}
+        <Typography color="primary.contrastText" variant="h3" fontWeight={'light'} textAlign="center" mt={'2vh'}>
+          {name}
+        </Typography>
+
+        <Grid2 container display="flex" justifyContent="center" pt={2} letterSpacing={1} rowGap={1} columnGap={0.5} alignItems={'center'} >
+          {techs?.map(tech => (
+            <Grid2 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20px, 1fr))' }}>
+              <TechTag children={tech} />
+            </Grid2>
+          ))}
+
+        </Grid2>
+
+        <Grid2 display={'flex'} justifyContent={'center'} height={'30vh'} margin={'3vh 3vh'} alignItems={'center'}>
+          <Typography color="primary.contrastText" textAlign="center" maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} borderTop={2} borderBottom={2} borderColor={"primary.contrastText"} padding={4}   >
+            {description}
           </Typography>
+        </Grid2>
 
-          <Grid2 container display="flex" justifyContent="center" pt={2} letterSpacing={1} rowGap={1} columnGap={0.5} alignItems={'center'} >
-            {techs?.map(tech => (
-              <Grid2 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20px, 1fr))' }}>
-                <TechTag children={tech} />
-              </Grid2>
-            ))}
+        <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} mb={'3vh'}>
+          {buttons.map((button, index) => (
+            <Grid2 size={5} key={index}>
+              <StyledButton
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = button.link
+                  link.target = '_blank'
+                  link.rel = 'noopener noreferrer'
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+              >
+                <Typography>{button.label}</Typography>
+              </StyledButton>
+            </Grid2>
+          ))}
+        </Grid2>
 
-          </Grid2>
-
-          <Grid2 display={'flex'} justifyContent={'center'}>
-            <Typography color="primary.contrastText" textAlign="center" height={'30vh'} overflow={'auto'} width={'fit-content'} borderTop={2} borderBottom={2} borderColor={"primary.contrastText"} padding={4} alignContent={'center'} margin={'3vh 3vh'} >
-              {description}
-            </Typography>
-          </Grid2>
-
-          <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} mb={'3vh'}>
-            {buttons.map((button, index) => (
-              <Grid2 size={5} key={index}>
-                <StyledButton
-                  onClick={() => {
-                    const link = document.createElement('a')
-                    link.href = button.link
-                    link.target = '_blank'
-                    link.rel = 'noopener noreferrer'
-                    document.body.appendChild(link)
-                    link.click()
-                    document.body.removeChild(link)
-                  }}
-                >
-                  <Typography>{button.label}</Typography>
-                </StyledButton>
-              </Grid2>
-            ))}
-          </Grid2>
-
-        </StyledProject >
-      </Grid2 >
+      </StyledProject >
     </>
   )
 }
