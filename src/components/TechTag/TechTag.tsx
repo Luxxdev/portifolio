@@ -1,4 +1,4 @@
-import { styled } from '@mui/material'
+import { styled, Typography } from '@mui/material'
 import { FC, PropsWithChildren } from 'react'
 
 const TechTag: FC<PropsWithChildren> = ({ children }) => {
@@ -12,7 +12,9 @@ const TechTag: FC<PropsWithChildren> = ({ children }) => {
 
     return (
         <>
-            <TechTag>{children}</TechTag>
+            <TechTag >
+                <Typography variant='body2' letterSpacing={2} fontWeight={'light'}>{children}</Typography>
+            </TechTag>
         </>
     )
 }

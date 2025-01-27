@@ -33,6 +33,7 @@ const Projects = () => {
                 link: button.link
               }))}
               techs={project.techs?.map(tech => (t(tech)))}
+              site={project.site}
             />
           ))}
         </Grid2>

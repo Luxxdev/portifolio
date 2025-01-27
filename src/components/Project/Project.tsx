@@ -6,6 +6,7 @@ import TechTag from '../TechTag/TechTag'
 interface ProjectProps {
   name?: string
   image?: string
+  site?: boolean
   description?: string
   buttons?: ButtonProps[]
   techs?: string[]
@@ -16,61 +17,64 @@ interface ButtonProps {
   link: string
 }
 
-const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [], techs }) => {
+const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [], techs, site }) => {
   name = name ? name : 'Nome'
   image = image ? image : placeHolder
+  site = site ? site : false
   description = description ? description : 'Descrição do projeto'
 
   const StyledProject = styled('div')(({ theme }) => ({
-    width: '90vw',
+    width: '75vw',
     height: '100%',
-    padding: '20px',
-    borderRadius: '10px',
+    border: `2px ${theme.palette.primary.contrastText} solid`,
     scrollBehavior: 'smooth',
     scrollbarColor: `${theme.palette.primary.main} ${theme.palette.primary.light}`,
     backgroundColor: theme.palette.primary.main,
     [theme.breakpoints.up('md')]: {
-      width: '40vw',
+      width: '35vw',
     }
-
   }))
 
-  const StyledImg = styled('img')(({ theme }) => ({
+  const ImageContainer = styled('div')(({ theme }) => ({
+    borderBottom: `1px ${theme.palette.primary.contrastText} solid`,
     width: '100%',
-    aspectRatio: 1 / 1,
-    border: `5px ${theme.palette.primary.contrastText} solid`,
-    borderRadius: '40%',
-    filter: 'grayscale(50%)',
-    [theme.breakpoints.up('md')]: {
-      width: '50%',
-    },
+    overflowY: site ? 'auto' : 'hidden',
+    aspectRatio: '1/1',
+    '& > img': {
+      width: '100%',
+      aspectRatio: site ? 'none' : '1/1',
+      filter: 'grayscale(50%)',
+    }
   }))
 
   return (
     <>
-      <Grid2 size='auto' textAlign="center" border={5} borderColor={"primary.contrastText"} borderRadius={'10px'} >
+      <Grid2 display={'flex'} alignItems={'space-around'}>
         <StyledProject>
-          <Typography color="primary.contrastText" variant="h3" fontWeight={'light'} textAlign="center" mb={5} mt={2} borderBottom={2} borderColor={"primary.contrastText"} pb={2}>
+          <ImageContainer >
+            <img src={image} loading='lazy' />
+          </ImageContainer>
+
+          <Typography color="primary.contrastText" variant="h3" fontWeight={'light'} textAlign="center" mt={'2vh'}>
             {name}
           </Typography>
 
-          <StyledImg src={image} />
-
           <Grid2 container display="flex" justifyContent="center" pt={2} letterSpacing={1} rowGap={1} columnGap={0.5} alignItems={'center'} >
             {techs?.map(tech => (
-              <Grid2 size='auto' justifyContent="center">
-                <TechTag>
-                  <Typography variant='body2' letterSpacing={2} fontWeight={'light'}>{tech}</Typography>
-                </TechTag>
+              <Grid2 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20px, 1fr))' }}>
+                <TechTag children={tech} />
               </Grid2>
             ))}
+
           </Grid2>
 
-          <Typography color="primary.contrastText" textAlign="center" height={'20vh'} overflow={'auto'} width={'100%'} borderTop={2} borderBottom={2} borderColor={"primary.contrastText"} margin={"50px 0px"} padding={2} alignContent={'center'}>
-            {description}
-          </Typography>
+          <Grid2 display={'flex'} justifyContent={'center'}>
+            <Typography color="primary.contrastText" textAlign="center" height={'30vh'} overflow={'auto'} width={'fit-content'} borderTop={2} borderBottom={2} borderColor={"primary.contrastText"} padding={4} alignContent={'center'} margin={'3vh 3vh'} >
+              {description}
+            </Typography>
+          </Grid2>
 
-          <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} alignItems={'center'} pb={3}>
+          <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} mb={'3vh'}>
             {buttons.map((button, index) => (
               <Grid2 size={5} key={index}>
                 <StyledButton
@@ -91,7 +95,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           </Grid2>
 
         </StyledProject >
-      </Grid2>
+      </Grid2 >
     </>
   )
 }

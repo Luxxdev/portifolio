@@ -1,6 +1,7 @@
 import placeHolder from '../../assets/images/placeHolder.png'
 import unt from '../../assets/images/untitled.png'
 import growers from '../../assets/images/growers.png'
+import portfolio from '../../assets/images/portfolio.png'
 
 
 const allProjetcs = [
@@ -12,7 +13,7 @@ const allProjetcs = [
             { label: 'projectsButtonViewProject', link: 'https://www.google.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.github.com' },
         ],
-        techs: ['react', 'i18n', 'react', 'i18n', 'react', 'i18n']
+        techs: ['react', 'i18n', 'javascriptaaa', 'i18n',]
     },
 
     {
@@ -24,6 +25,18 @@ const allProjetcs = [
             { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
         ],
         techs: ['react', 'i18n']
+    },
+
+    {
+        name: 'project2Title',
+        description: 'project2Text',
+        image: portfolio,
+        buttons: [
+            { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
+            { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
+        ],
+        techs: ['react', 'i18n'],
+        site: true
     },
 ]
 
