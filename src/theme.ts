@@ -28,7 +28,7 @@ let themeDark = createTheme({
       light: '#152129',
       main: '#0E161B',
       dark: '#010C13',
-      contrastText: '#DAFBFB'
+      contrastText: '#EDFDFD'
     },
     secondary: {
       main: '#10A8A8',
