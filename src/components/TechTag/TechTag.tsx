@@ -3,17 +3,17 @@ import { FC, PropsWithChildren } from 'react'
 
 const TechTag: FC<PropsWithChildren> = ({ children }) => {
     const TechTag = styled('div')(({ theme }) => ({
-        backgroundColor: 'transparent',
-        border: `3px solid ${theme.palette.primary.light}`,
+        backgroundColor: theme.palette.primary.dark,
+        border: `3px solid ${theme.palette.secondary.contrastText}`,
         borderRadius: '10px',
-        padding: '5px',
+        padding: '8px',
         color: theme.palette.primary.contrastText,
     }))
 
     return (
         <>
             <TechTag >
-                <Typography variant='body2' letterSpacing={2} fontWeight={'light'}>{children}</Typography>
+                <Typography variant='body2' letterSpacing={2.5} fontWeight={'light'}>{children}</Typography>
             </TechTag>
         </>
     )

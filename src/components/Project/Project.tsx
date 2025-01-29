@@ -24,26 +24,31 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
   description = description ? description : 'Descrição do projeto'
 
   const StyledProject = styled('div')(({ theme }) => ({
+    borderTopLeftRadius: '10px',
+    borderBottomRightRadius: '10px',
+    borderBottomLeftRadius: '10px',
     width: '75vw',
     height: '100%',
-    border: `2px ${theme.palette.primary.contrastText} solid`,
+    border: `1px ${theme.palette.secondary.contrastText} solid`,
     scrollBehavior: 'smooth',
-    scrollbarColor: `${theme.palette.primary.main} ${theme.palette.primary.light}`,
-    backgroundColor: theme.palette.primary.main,
+    scrollbarColor: `${theme.palette.primary.dark} ${theme.palette.primary.light}`,
+    backgroundColor: theme.palette.primary.dark,
     [theme.breakpoints.up('md')]: {
       width: '35vw',
     }
   }))
 
   const ImageContainer = styled('div')(({ theme }) => ({
-    borderBottom: `1px ${theme.palette.primary.contrastText} solid`,
+    borderBottom: `1px ${theme.palette.secondary.contrastText} solid`,
     width: '100%',
     overflowY: site ? 'auto' : 'hidden',
     aspectRatio: '1/1',
+    borderTopLeftRadius: '8px',
     '& > img': {
       width: '100%',
       aspectRatio: site ? 'none' : '1/1',
       filter: 'grayscale(50%)',
+
     }
   }))
 
@@ -54,11 +59,11 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           <img src={image} loading='lazy' />
         </ImageContainer>
 
-        <Typography color="primary.contrastText" variant="h3" fontWeight={'light'} textAlign="center" mt={'2vh'}>
+        <Typography color="primary.contrastText" variant="h3" textAlign="center" mt={'2vh'}>
           {name}
         </Typography>
 
-        <Grid2 container display="flex" justifyContent="center" pt={2} letterSpacing={1} rowGap={1} columnGap={0.5} alignItems={'center'} >
+        <Grid2 container display="flex" justifyContent="center" margin={'4vh 3vh'} padding={2} letterSpacing={1} rowGap={1} columnGap={0.5} alignItems={'center'} borderTop={1} borderBottom={1} borderColor={"secondary.contrastText"}>
           {techs?.map(tech => (
             <Grid2 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20px, 1fr))' }}>
               <TechTag children={tech} />
@@ -68,7 +73,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
         </Grid2>
 
         <Grid2 display={'flex'} justifyContent={'center'} height={'30vh'} margin={'3vh 3vh'} alignItems={'center'}>
-          <Typography color="primary.contrastText" textAlign="center" maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} borderTop={2} borderBottom={2} borderColor={"primary.contrastText"} padding={4}   >
+          <Typography color="primary.contrastText" textAlign="center" maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} padding={4} style={{ backgroundColor: 'primary.main' }}>
             {description}
           </Typography>
         </Grid2>

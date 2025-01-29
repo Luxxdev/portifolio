@@ -20,6 +20,7 @@ const DarkModeToggle = () => {
     // },
     display: 'flex',
     '&:hover': {
+      color: theme.palette.secondary.contrastText,
       transform: 'scale(1.2)',
       cursor: 'pointer',
     },

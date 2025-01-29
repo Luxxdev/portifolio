@@ -26,7 +26,7 @@ const Hero = () => {
 
   const StyledImg = styled('img')(({ theme }) => ({
     borderRadius: '50%',
-    border: `2px solid ${theme.palette.primary.contrastText}`,
+    // border: `2px solid ${theme.palette.primary.contrastText}`,
     filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
     [theme.breakpoints.up('xs')]: {
       width: '50%',
@@ -56,13 +56,13 @@ const Hero = () => {
 
               <Grid2 container display={'flex'} justifyContent={'center'}>
                 <Grid2 size={{ xs: 12, md: 12 }} display={'flex'} justifyContent={'center'}>
-                  <Typography color="primary.contrastText" variant="h1" textAlign={'center'} pb={5} pt={{ xs: 2, md: 0 }}>
+                  <Typography color="primary.contrastText" fontWeight={'400'} variant="h1" textAlign={'center'} pb={3} pt={{ xs: 3, md: 0 }} borderBottom={2} borderColor={'secondary.light'}>
                     Lucas Queirolo
                   </Typography>
                 </Grid2>
 
                 <Grid2 size={{ xs: 12, md: 12 }} display={'flex'} justifyContent={'center'}>
-                  <Typography color="primary.contrastText" variant="h2" textAlign={'center'} pb={5} display={'flex'} maxWidth={450} >
+                  <Typography color="secondary.contrastText" variant="h2" textAlign={'center'} pb={{ xs: 5, md: 8 }} pt={3} display={'flex'} maxWidth={450} >
                     {t('heroRole')}
                   </Typography>
                 </Grid2>
@@ -96,7 +96,7 @@ const Hero = () => {
             </Grid2>
           </Grid2>
         </Container>
-      </StyledHero>
+      </StyledHero >
     </>
   )
 }

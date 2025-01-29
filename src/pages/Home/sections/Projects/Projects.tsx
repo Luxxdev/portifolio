@@ -7,6 +7,7 @@ const Projects = () => {
   const { t } = useTranslation()
 
   const StyledProjects = styled('div')(({ theme }) => ({
+    borderTop: `1px solid ${theme.palette.secondary.contrastText}`,
     backgroundColor: theme.palette.primary.main,
     minHeight: '100vh',
     paddingBottom: '50px',
@@ -18,7 +19,7 @@ const Projects = () => {
   return (
     <>
       <StyledProjects id="projects">
-        <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={10} >
+        <Typography color="primary.contrastText" fontWeight={'400'} variant="h2" textAlign="center" pb={10} >
           {t('projectsTitle')}
         </Typography>
 

@@ -10,17 +10,19 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
   const StyledButton = styled('button')(({ theme }) => ({
 
     backgroundColor: 'transparent',
-    border: `1px solid ${theme.palette.primary.contrastText}`,
-    borderRadius: '3px',
-    padding: '5px 15 px',
+    borderRadius: '5px',
+    padding: '10px 15px',
     width: '100%',
-    color: theme.palette.primary.contrastText,
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: '10px',
+    color: theme.palette.primary.contrastText,
+    border: `2px solid ${theme.palette.primary.contrastText}`,
     '&:hover': {
-      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.secondary.main,
+      border: `2px solid ${theme.palette.secondary.main}`,
+      // backgroundColor: theme.palette.secondary.dark,
       cursor: 'pointer',
     },
   }))

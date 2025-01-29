@@ -4,14 +4,16 @@ let themeLight = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      light: '#ffffff',
-      main: '#f0f0f0',
-      dark: '#b0b0b0',
-      contrastText: '#000000'
+      light: '#DBEEFA',
+      main: '#CFE6F4',
+      dark: '#C5DBE6',
+      contrastText: '#152129'
     },
     secondary: {
-      main: '#b0b0b0',
-      light: '#a0a0a0',
+      main: '#10A8A8',
+      light: '#13CDCD',
+      contrastText: '#074B4B'
+
     },
   },
   typography: {
@@ -23,15 +25,17 @@ let themeDark = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      light: '#252525',
-      main: '#191919',
-      dark: '#111111',
-      contrastText: '#f0f0f0'
+      light: '#152129',
+      main: '#0E161B',
+      dark: '#010C13',
+      contrastText: '#DAFBFB'
     },
     secondary: {
-      main: '#353535',
-      light: '#181818',
+      main: '#10A8A8',
+      light: '#13CDCD',
+      contrastText: '#B6F7F7'
     },
+
   },
   typography: {
     fontFamily: 'Segoe UI',

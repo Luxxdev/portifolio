@@ -20,12 +20,14 @@
 - habilidades não estao centralizadas no mobile -- feito
 - espaço preto em cima da navbar no mobile(tem a ver com a barra de endereço aparecendo, que também quebra o tamanho de 100vh, fazendo o menu mobile ser menor que a tela) -- feito
 - menu mobile levemente maior que a tela, mostrnado linhas brancas em cima e na direita ao mover -- feito
+- scroll no texto do projeto -- feito
+- melhorar tamanho dos projetos / melhorar toda a aparencia -- feito
 
 
 MELHORAS
+- melhorar a img da itch
+- parágrafos nos textos
 - melhorar paleta de cores
-- melhorar tamanho dos projetos / melhorar toda a aparencia
-- scroll no texto do projeto 
 - animações
 - imagens nas skills
 
@@ -66,6 +68,7 @@ links
 traduções
 
 curriculo ingles
+
 
 
 

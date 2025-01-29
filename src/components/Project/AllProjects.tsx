@@ -8,12 +8,14 @@ const allProjetcs = [
     {
         name: 'project1Title',
         description: 'project1Text',
-        image: unt,
+        image: portfolio,
         buttons: [
             { label: 'projectsButtonViewProject', link: 'https://www.google.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.github.com' },
         ],
-        techs: ['react', 'i18n', 'javascriptaaa', 'i18n',]
+        techs: ['typescript', 'react', 'vite', 'i18n',],
+        site: true
+
     },
 
     {
@@ -24,19 +26,28 @@ const allProjetcs = [
             { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
         ],
-        techs: ['react', 'i18n']
+        techs: ['Godot', 'GDScript']
     },
 
     {
-        name: 'project2Title',
-        description: 'project2Text',
-        image: portfolio,
+        name: 'project3Title',
+        description: 'project3Text',
+        image: unt,
         buttons: [
             { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
         ],
         techs: ['react', 'i18n'],
-        site: true
+    },
+    {
+        name: 'project4Title',
+        description: 'project4Text',
+        image: unt,
+        buttons: [
+            { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
+            { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
+        ],
+        techs: ['react', 'i18n'],
     },
 ]
 

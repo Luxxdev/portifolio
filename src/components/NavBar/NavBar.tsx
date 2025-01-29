@@ -25,8 +25,11 @@ const StyledMenuIcon = styled(MenuItem)(({ theme }) => ({
   margin: '0px 5vw',
   textDecoration: 'none',
   '&:hover': {
-    backdropFilter: 'blur(15px)',
-    textDecoration: 'underline',
+    transform: 'scale(1.1)',
+    color: theme.palette.secondary.contrastText,
+
+    // backdropFilter: 'blur(15px)',
+    // textDecoration: 'underline',
     cursor: 'pointer',
   },
 }))
@@ -54,6 +57,7 @@ const NavBar = () => {
     height: `${toolbarHeight}dvh`,
     backgroundColor: theme.palette.primary.dark,
     overflow: 'hidden',
+    borderBottom: `1px solid ${theme.palette.secondary.contrastText}`,
     '& > div': {
       display: 'flex',
       flexDirection: bigScreen ? 'row' : 'column',

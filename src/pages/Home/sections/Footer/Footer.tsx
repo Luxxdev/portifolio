@@ -9,6 +9,7 @@ const Footer = () => {
   const { t } = useTranslation()
 
   const StyledFooter = styled('div')(({ theme }) => ({
+    borderTop: `1px solid ${theme.palette.secondary.contrastText}`,
     display: 'flex',
     backgroundColor: theme.palette.primary.dark,
     color: theme.palette.primary.contrastText,
@@ -26,8 +27,13 @@ const Footer = () => {
     justifyContent: 'center',
     alignItems: 'center',
     height: '5vh',
+    border: `1px solid ${theme.palette.primary.contrastText}`,
+    borderColor: theme.palette.primary.contrastText,
     '&:hover': {
-      backgroundColor: theme.palette.secondary.light,
+      // backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.primary.dark,
+      borderColor: theme.palette.secondary.main,
+      color: theme.palette.secondary.main,
       cursor: 'pointer',
     },
   }))
@@ -43,23 +49,23 @@ const Footer = () => {
     <>
       <StyledFooter id="footer">
         <Container>
-          <Typography variant="h2" textAlign={'center'} paddingBottom={'75px'}>
+          <Typography variant="h2" fontWeight={'400'} textAlign={'center'} paddingBottom={'75px'}>
             {t('footerContact')}
           </Typography>
           <Grid2 container spacing={5}>
-            <Grid2 size={{ xs: 12, md: 4 }} border={1} borderColor="primary.contrastText" alignContent={'center'}>
+            <Grid2 size={{ xs: 12, md: 4 }} >
               <StyledLink href="https://www.linkedin.com/in/lucasqueirolo/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon />
                 <StyledTypography>/lucasqueirolo</StyledTypography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} >
               <StyledLink href={`https://mail.google.com/mail/u/0/?fs=1&to=lucas.queirolo.santos@gmail.com&body=${t('messageGreeting')}&tf=cm`} target="_blank" rel="noopener noreferrer">
                 <EmailIcon />
                 <StyledTypography>lucas.queirolo.s@gmail.com</StyledTypography>
               </StyledLink>
             </Grid2>
-            <Grid2 size={{ xs: 12, md: 4 }} border={1} borderColor="primary.contrastText">
+            <Grid2 size={{ xs: 12, md: 4 }} >
               <StyledLink href={`https://web.whatsapp.com/send/?phone=5521999894540&text=${t('messageGreeting')}`} target="_blank" rel="noopener noreferrer">
                 <CallIcon />
                 <StyledTypography>+55 (21) 99989-4540</StyledTypography>

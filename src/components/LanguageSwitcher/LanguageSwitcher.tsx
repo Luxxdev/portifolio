@@ -8,19 +8,20 @@ export const LanguageSwitcher = () => {
 
   const StyledButton = styled('button')(({ theme }) => ({
     backgroundColor: 'transparent',
-    border: `1px solid ${theme.palette.primary.contrastText}`,
+    border: `2px solid ${theme.palette.primary.contrastText}`,
     borderRadius: '3px',
     height: '5vh',
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.secondary.contrastText,
     display: 'flex',
     aspectRatio: 1 / 1,
     position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
     '&:hover': {
+      border: `2px solid ${theme.palette.secondary.contrastText}`,
+      color: theme.palette.secondary.contrastText,
       cursor: 'pointer',
       transform: 'scale(1.1)',
-      backgroundColor: theme.palette.secondary.light,
     },
   }))
 
@@ -31,7 +32,7 @@ export const LanguageSwitcher = () => {
           i18n.changeLanguage(t('oppositeLanguage'))
         }}
       >
-        <Typography>{t('oppositeLanguage').toUpperCase()}</Typography>
+        <Typography variant='h6' >{t('oppositeLanguage').toUpperCase()}</Typography>
       </StyledButton>
     </div>
   )

@@ -5,10 +5,10 @@ interface SkillsButtonProps {
   fixedSizeRatio?: boolean
 
 }
-const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio }) => {
-  const SkillsButton = styled('div')(({ theme }) => ({
+const SkillsTag: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio }) => {
+  const SkillsTag = styled('div')(({ theme }) => ({
     backgroundColor: 'transparent',
-    border: `1px solid ${theme.palette.primary.contrastText}`,
+    border: `2px solid ${fixedSizeRatio ? theme.palette.secondary.contrastText : theme.palette.primary.contrastText}`,
     borderRadius: '7px',
     padding: '15px 15px',
     minWidth: 'fit-content',
@@ -24,9 +24,9 @@ const SkillsButton: React.FC<SkillsButtonProps> = ({ children, fixedSizeRatio })
 
   return (
     <>
-      <SkillsButton>{children}</SkillsButton>
+      <SkillsTag>{children}</SkillsTag>
     </>
   )
 }
 
-export default SkillsButton
+export default SkillsTag

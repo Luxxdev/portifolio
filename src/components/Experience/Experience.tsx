@@ -14,10 +14,11 @@ const Experience: React.FC<expProps> = ({ name, date, description }) => {
         overflow: 'auto',
         padding: '20px',
         backgroundColor: theme.palette.primary.main,
+        border: `1px solid ${theme.palette.secondary.contrastText}`,
     }))
     return (
         <>
-            <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'} border={1} borderColor={'"primary.contrastText"'} margin={2}  >
+            <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'} margin={2}  >
                 <StyledExperience>
                     <Typography color="primary.contrastText" variant="h4" fontWeight={'lighter'} textAlign="left" pb={1}>
                         {name}
@@ -25,7 +26,7 @@ const Experience: React.FC<expProps> = ({ name, date, description }) => {
                     <Typography color="primary.contrastText" fontWeight={'lighter'} pb={5}>
                         {date}
                     </Typography>
-                    <Typography color="primary.contrastText" fontWeight={'lighter'} pb={1}>
+                    <Typography color="primary.contrastText" fontWeight={'lighter'} pb={1} textAlign='justify'>
                         {description}
                     </Typography>
                 </StyledExperience>
