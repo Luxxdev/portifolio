@@ -1,4 +1,3 @@
-import placeHolder from '../../assets/images/placeHolder.png'
 import unt from '../../assets/images/untitled.png'
 import growers from '../../assets/images/growers.png'
 import portfolio from '../../assets/images/portfolio.png'
