@@ -23,7 +23,7 @@ const Projects = () => {
           {t('projectsTitle')}
         </Typography>
 
-        <Grid2 container display={'flex'} justifyContent={'center'} spacing={10}>
+        <Grid2 container display='inline-flex' justifyContent={'center'} spacing={10}>
           {allProjetcs.map(project => (
             <Project
               name={t(project.name)}

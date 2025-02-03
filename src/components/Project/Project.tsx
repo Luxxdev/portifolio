@@ -19,7 +19,7 @@ interface ButtonProps {
 
 const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [], techs, site }) => {
   name = name ? name : 'Nome'
-  image = image ? image : placeHolder
+  image = image ? image : ''
   site = site ? site : false
   description = description ? description : 'Descrição do projeto'
 
@@ -55,9 +55,11 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
   return (
     <>
       <StyledProject>
-        <ImageContainer >
-          <img src={image} loading='lazy' />
-        </ImageContainer>
+        {image != '' &&
+          <ImageContainer >
+            <img src={image} loading='lazy' />
+          </ImageContainer>
+        }
 
         <Typography color="primary.contrastText" variant="h3" textAlign="center" mt={'2vh'}>
           {name}
