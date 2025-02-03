@@ -12,7 +12,7 @@ const allProjetcs = [
             { label: 'projectsButtonViewProject', link: 'https://www.google.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.github.com' },
         ],
-        techs: ['typescript', 'react', 'vite', 'i18n',],
+        techs: ['typescript', 'react'],
         site: true
 
     },
@@ -36,7 +36,7 @@ const allProjetcs = [
             { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
         ],
-        techs: ['react', 'i18n'],
+        techs: ['Unity', 'C#', 'Godot', "GDScript"],
     },
     {
         name: 'project4Title',
@@ -46,7 +46,7 @@ const allProjetcs = [
             { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
         ],
-        techs: ['react', 'i18n'],
+        techs: ['Unity', 'C#'],
     },
     {
         name: 'project5Title',
@@ -56,7 +56,7 @@ const allProjetcs = [
             { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
             { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
         ],
-        techs: ['react', 'i18n'],
+        techs: ['Selenium', 'Python'],
     },
 ]
 
