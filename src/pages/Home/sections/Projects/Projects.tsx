@@ -9,6 +9,9 @@ const Projects = () => {
   const StyledProjects = styled('div')(({ theme }) => ({
     borderTop: `1px solid ${theme.palette.secondary.contrastText}`,
     backgroundColor: theme.palette.primary.main,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     minHeight: '100vh',
     paddingBottom: '50px',
     paddingTop: '50px',
@@ -23,7 +26,7 @@ const Projects = () => {
           {t('projectsTitle')}
         </Typography>
 
-        <Grid2 container display='inline-flex' justifyContent={'center'} spacing={10}>
+        <Grid2 container spacing={10} width={{ md: '65vw', sm: '80vw' }} >
           {allProjetcs.map(project => (
             <Project
               name={t(project.name)}

@@ -22,7 +22,7 @@ const StyledMobileMenu = styled(Modal)(({ }) => ({
 
 const StyledMenuIcon = styled(MenuItem)(({ theme }) => ({
   color: theme.palette.primary.contrastText,
-  margin: '0px 5vw',
+  margin: '0px 3vw',
   textDecoration: 'none',
   '&:hover': {
     transform: 'scale(1.1)',
