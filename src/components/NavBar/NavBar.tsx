@@ -55,6 +55,7 @@ const NavBar = () => {
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
     height: `${toolbarHeight}dvh`,
+    padding: 24,
     backgroundColor: theme.palette.primary.dark,
     overflow: 'hidden',
     borderBottom: `1px solid ${theme.palette.secondary.contrastText}`,
@@ -79,7 +80,7 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" >
         <StyledToolbar id="navbar">
           {bigScreen ? (
             <>
