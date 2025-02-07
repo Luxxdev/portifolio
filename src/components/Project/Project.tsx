@@ -85,9 +85,9 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           <Grid2 size={12} >
             <TextContainer>
               <Grid2>
-                <StyledTypography color="primary.contrastText" variant="h3" textAlign="center" mt={3} pb={1}>
+                <Typography color="primary.contrastText" variant="h3" textAlign="center" mt={3} pb={1}>
                   {name}
-                </StyledTypography>
+                </Typography>
 
                 <Grid2 container display="flex" justifyContent="center" margin={'2vh 3vh'} padding={1} rowGap={1} columnGap={0.5} alignItems={'center'} borderTop={1} borderBottom={1} borderColor={"secondary.contrastText"}>
                   {techs?.map(tech => (
@@ -98,7 +98,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
                 </Grid2>
               </Grid2>
 
-              <StyledTypography color="primary.contrastText" textAlign={'center'} maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} padding={'5vh 5vh'} >
+              <StyledTypography color="primary.contrastText" textAlign={'center'} maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} padding={'5vh 2vh'} margin={'0vh 3vh'} >
                 {description}
               </StyledTypography>
 

@@ -10,8 +10,6 @@ interface expProps {
 const Experience: React.FC<expProps> = ({ name, date, description }) => {
     const StyledExperience = styled('div')(({ theme }) => ({
         minHeight: '100%',
-        maxHeight: '60vh',
-        overflow: 'auto',
         padding: '20px',
         backgroundColor: theme.palette.primary.main,
         border: `1px solid ${theme.palette.secondary.contrastText}`,
