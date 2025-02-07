@@ -32,7 +32,8 @@ const Experiences = () => {
                             <Experience
                                 name={t(exp.name)}
                                 date={exp.date}
-                                description={t(exp.description)} />
+                                description={t(exp.description)}
+                                img />
                         ))}
                     </Grid2>
                 </Container>
