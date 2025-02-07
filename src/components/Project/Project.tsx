@@ -1,4 +1,4 @@
-import { Grid2, styled, Typography } from '@mui/material'
+import { Grid2, styled, Typography, useMediaQuery } from '@mui/material'
 import StyledButton from '../StyledButton/StyledButton'
 import TechTag from '../TechTag/TechTag'
 
@@ -9,6 +9,7 @@ interface ProjectProps {
   description?: string
   buttons?: ButtonProps[]
   techs?: string[]
+  imgFirst?: boolean
 }
 
 interface ButtonProps {
@@ -16,7 +17,9 @@ interface ButtonProps {
   link: string
 }
 
-const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [], techs, site }) => {
+const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [], techs, site, imgFirst }) => {
+  const bigScreen = useMediaQuery((theme) => theme.breakpoints.up('md'))
+
   name = name ? name : 'Nome'
   image = image ? image : ''
   site = site ? site : false
@@ -58,7 +61,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
     }
   }))
 
-  const TextContainer = styled('div')(({ theme }) => ({
+  const TextContainer = styled('div')(() => ({
     width: '100%',
     height: '100%',
     display: 'flex',
@@ -67,15 +70,11 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
 
   }))
 
-  const StyledTypography = styled(Typography)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-  }))
-
   return (
     <>
       <Grid2 size={image ? 12 : { xs: 12, lg: 6 }} >
         <StyledProject>
-          {image != '' &&
+          {(image != '' && (imgFirst || !bigScreen)) &&
             <Grid2 size={12}>
               <ImageContainer >
                 <img src={image} loading='lazy' />
@@ -85,11 +84,11 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           <Grid2 size={12} >
             <TextContainer>
               <Grid2>
-                <Typography color="primary.contrastText" variant="h3" textAlign="center" mt={3} pb={1}>
+                <Typography color="primary.contrastText" variant="h3" textAlign="center" mt={3} pb={1} >
                   {name}
                 </Typography>
 
-                <Grid2 container display="flex" justifyContent="center" margin={'2vh 3vh'} padding={1} rowGap={1} columnGap={0.5} alignItems={'center'} borderTop={1} borderBottom={1} borderColor={"secondary.contrastText"}>
+                <Grid2 container display="flex" justifyContent="center" margin={'2vh 3vh'} mt={0} padding={1} rowGap={1} columnGap={0.5} alignItems={'center'} borderTop={1} borderBottom={1} borderColor={"secondary.contrastText"}>
                   {techs?.map(tech => (
                     <Grid2 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20px, 1fr))' }}>
                       <TechTag children={tech} />
@@ -98,9 +97,9 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
                 </Grid2>
               </Grid2>
 
-              <StyledTypography color="primary.contrastText" textAlign={'center'} maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} padding={'5vh 2vh'} margin={'0vh 3vh'} >
+              <Typography color="primary.contrastText" textAlign={'justify'} maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} padding={'5vh 2vh'} margin={'0vh 3vh'} >
                 {description}
-              </StyledTypography>
+              </Typography>
 
               <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} mb={'3vh'} mt={3}>
                 {buttons.map((button, index) => (
@@ -124,7 +123,13 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
             </TextContainer>
 
           </Grid2>
-
+          {(image != '' && (!imgFirst && bigScreen)) &&
+            <Grid2 size={12}>
+              <ImageContainer >
+                <img src={image} loading='lazy' />
+              </ImageContainer>
+            </Grid2>
+          }
         </StyledProject >
       </Grid2>
     </>

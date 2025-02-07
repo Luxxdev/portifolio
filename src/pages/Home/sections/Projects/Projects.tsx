@@ -27,7 +27,7 @@ const Projects = () => {
         </Typography>
 
         <Grid2 container spacing={10} width={{ md: '65vw', sm: '80vw', xs: '80vw' }} >
-          {allProjetcs.map(project => (
+          {allProjetcs.map((project, index) => (
             <Project
               name={t(project.name)}
               description={t(project.description)}
@@ -38,6 +38,7 @@ const Projects = () => {
               }))}
               techs={project.techs?.map(tech => (t(tech)))}
               site={project.site}
+              imgFirst={index % 2 === 0}
             />
           ))}
         </Grid2>
