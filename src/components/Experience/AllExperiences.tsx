@@ -12,7 +12,7 @@ const allExperiences = [
     },
     {
         name: 'experience3Title',
-        date: '06/2019-04/2018',
+        date: '06/2017-04/2018',
         description: 'experience3Text',
     },
 ]

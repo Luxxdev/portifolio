@@ -9,8 +9,7 @@ const allProjetcs = [
         description: 'project1Text',
         image: portfolio,
         buttons: [
-            { label: 'projectsButtonViewProject', link: 'https://www.google.com' },
-            { label: 'projectsButtonViewCode', link: 'https://www.github.com' },
+            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/portifolio' },
         ],
         techs: ['typescript', 'react'],
         site: true
@@ -22,8 +21,8 @@ const allProjetcs = [
         description: 'project2Text',
         image: growers,
         buttons: [
-            { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
-            { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
+            { label: 'itchPage', link: 'https://opaogamestudio.itch.io/growers' },
+            { label: 'steamPage', link: 'https://store.steampowered.com/app/2613940/Growers/' },
         ],
         techs: ['Godot', 'GDScript']
     },
@@ -33,8 +32,8 @@ const allProjetcs = [
         description: 'project3Text',
         image: itch,
         buttons: [
-            { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
-            { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
+            { label: 'itchPage', link: 'https://luxezito.itch.io/' },
+            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev?tab=repositories' },
         ],
         techs: ['Unity', 'C#', 'Godot', "GDScript"],
     },
@@ -43,8 +42,7 @@ const allProjetcs = [
         description: 'project4Text',
         image: '',
         buttons: [
-            { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
-            { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
+            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/Volin' },
         ],
         techs: ['Unity', 'C#'],
     },
@@ -53,8 +51,7 @@ const allProjetcs = [
         description: 'project5Text',
         image: '',
         buttons: [
-            { label: 'projectsButtonViewProject', link: 'https://www.github.com' },
-            { label: 'projectsButtonViewCode', link: 'https://www.google.com' },
+            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/exyon-bot' },
         ],
         techs: ['Selenium', 'Python'],
     },

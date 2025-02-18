@@ -17,7 +17,7 @@
     "skillsTitle": "Habilidades",
     "projectsTitle": "Projetos",
     "projectsButtonViewProject": "Ver Projeto",
-    "projectsButtonViewCode": "Ver Código",
+    "projectsButtonViewCode": "Github",
     "project1Title": "Este Portfólio",
     "project1Text": "Projeto feito para por em prática meus conhecimentos em desenolvimento front-end e expor minhas habilidades e experiências.",
     "project2Title": "Growers",
@@ -37,6 +37,8 @@
     "experience3Text": "Atuei como sub-gerente na Octopus Game Studio, um estúdio indie de jogos do Rio de Janeiro. Fui reponsável por auxiliar na tomada de decisões empresariais, gerenciar e supervisionar a equipe passando requisições da gerência, fazer a organização de eventos e aulas disponibilizadas pelo estúdio, além de auxiliar na gestão do orçamento. Nesse papel, tive a oportunidade de aprimorar minhas habilidades de gestão de projetos e pessoas, bem como trabalhar minha comunicação e liderança.",
     "footerContact": "Contato",
     "footerRights": "© 2025 Lucas Queirolo. Todos os direitos reservados.",
-    "messageGreeting": "Olá,"
+    "messageGreeting": "Olá,",
+    "steamPage": "Steam",
+    "itchPage": "Itch.io"
   }
 }
