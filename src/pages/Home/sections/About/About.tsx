@@ -54,7 +54,7 @@ const About = () => {
             </Grid2>
 
             <Grid2 size={{ xs: 12, md: 12 }} borderBottom={2} borderColor="secondary.main" paddingBottom={10} justifyContent={'center'}>
-              <Typography color="primary.contrastText" variant="h5" textAlign="center">
+              <Typography color="primary.contrastText" variant="h5" textAlign="justify" >
                 {t('aboutText')}
               </Typography>
             </Grid2>
