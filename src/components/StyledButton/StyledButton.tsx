@@ -15,7 +15,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
     width: '100%',
     display: 'inline-flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     gap: '10px',
     color: theme.palette.primary.contrastText,
     border: `2px solid ${theme.palette.primary.contrastText}`,

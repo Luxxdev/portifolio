@@ -70,7 +70,7 @@ const Hero = () => {
 
 
               <Grid2 container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
-                <Grid2 size={{ xs: 7, md: 5 }} display={'flex'} justifyContent={'center'}>
+                <Grid2 size={{ xs: 8, md: 5 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton
                     onClick={() => {
                       const link = document.createElement('a')
@@ -82,14 +82,14 @@ const Hero = () => {
                     }}
                   >
                     <DownloadIcon />
-                    <Typography >{t('heroButtonDownload')}</Typography>
+                    <Typography width={'100%'} >{t('heroButtonDownload')}</Typography>
                   </StyledButton>
                 </Grid2>
 
-                <Grid2 size={{ xs: 7, md: 5 }} display={'flex'} justifyContent={'center'}>
+                <Grid2 size={{ xs: 8, md: 5 }} display={'flex'} justifyContent={'center'}>
                   <StyledButton onClick={() => ScrollTo('footer')}>
                     <AlternateEmailIcon />
-                    <Typography>{t('heroButtonContact')}</Typography>
+                    <Typography width={'100%'}>{t('heroButtonContact')}</Typography>
                   </StyledButton>
                 </Grid2>
               </Grid2>
