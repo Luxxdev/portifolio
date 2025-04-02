@@ -115,7 +115,7 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
                         document.body.removeChild(link)
                       }}
                     >
-                      <Typography>{button.label}</Typography>
+                      <Typography width={'100%'} >{button.label}</Typography>
                     </StyledButton>
                   </Grid2>
                 ))}
