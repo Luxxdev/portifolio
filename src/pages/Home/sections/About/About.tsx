@@ -3,7 +3,7 @@ import SkillsTag from '../../../../components/SkillsTag/SkillsTag'
 import SchoolIcon from '@mui/icons-material/School'
 import { useTranslation } from 'react-i18next'
 
-const skills = ["HTML", "CSS", "Javascript", "React", "Typescript", "Git", "Python", "Selenium", "C#", 'C++', 'SQL', 'GDScript', 'Game Design', 'Level Design', "Narrative Design", 'Unreal Engine', 'Godot Engine', 'Unity Engine',]
+const skills = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Git", "Python", "Selenium", "C#", 'C++', 'SQL', 'GDScript', 'Game Design', 'Level Design', "Narrative Design", 'Unreal Engine', 'Godot Engine', 'Unity Engine',]
 
 const About = () => {
 
@@ -29,13 +29,26 @@ const About = () => {
                 {t('aboutTitle')}
               </Typography>
             </Grid2>
-            <Grid2 size={{ xs: 6, md: 12 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5}>
-              <SkillsTag fixedSizeRatio={true}>
-                <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} alignItems={'center'} color='secondary.main'>
-                  <SchoolIcon />
+
+            <Grid2 size={{ xs: 7, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0} color='secondary.main'>
+              <SkillsTag fixedSizeRatio={true} secondColor={true}>
+                <SchoolIcon />
+                <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2}>
                   <Typography color='primary.contrastText' variant='h5' fontWeight={'bold'} letterSpacing={1}>{t('aboutEducation')}</Typography>
                   <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{t('aboutUniversity')}</Typography>
                   <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{'2019-2021'}</Typography>
+                </Grid2>
+              </SkillsTag>
+            </Grid2>
+
+            <Grid2 size={{ xs: 7, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0}>
+              <SkillsTag fixedSizeRatio={true} secondColor={true}>
+                <SchoolIcon />
+                <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2} >
+
+                  <Typography color='primary.contrastText' variant='h5' fontWeight={'bold'} letterSpacing={1}>{t('aboutEducation2')}</Typography>
+                  <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{t('aboutUniversity2')}</Typography>
+                  <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{'2025-' + t('present')}</Typography>
                 </Grid2>
               </SkillsTag>
             </Grid2>

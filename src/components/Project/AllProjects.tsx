@@ -1,6 +1,7 @@
 import itch from '../../assets/images/itchimg.png'
 import growers from '../../assets/images/growersimg.png'
 import portfolio from '../../assets/images/portfolio.png'
+import francogagnor from '../../assets/images/francogagnor.png'
 
 
 const allProjetcs = [
@@ -11,7 +12,7 @@ const allProjetcs = [
         buttons: [
             { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/portifolio' },
         ],
-        techs: ['typescript', 'react'],
+        techs: ['TypeScript', 'React', 'MUI'],
         site: true
 
     },
@@ -54,6 +55,18 @@ const allProjetcs = [
             { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/exyon-bot' },
         ],
         techs: ['Selenium', 'Python'],
+    },
+
+    {
+        name: 'project6Title',
+        description: 'project6Text',
+        image: francogagnor,
+        buttons: [
+            { label: 'projectsButtonViewCode', link: 'https://github.com/PedroVillafuerte/FrancoGagnorShop' },
+        ],
+        techs: ['TypeScript', 'React', 'MUI'],
+        site: true
+
     },
 ]
 

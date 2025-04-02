@@ -1,9 +1,11 @@
 import { AppBar, Grid2, MenuItem, styled, Toolbar, Typography, useMediaQuery } from '@mui/material'
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import { useTranslation } from 'react-i18next'
-import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
+import DarkModeToggle, { StyledA } from '../DarkModeToggle/DarkModeToggle'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { useEffect, useState } from 'react';
 import Modal from '@mui/material/Modal';
 
@@ -84,13 +86,23 @@ const NavBar = () => {
         <StyledToolbar id="navbar">
           {bigScreen ? (
             <>
-              <DarkModeToggle />
+              <div style={{ fontSize: '5vh', gap: 5 }} >
+                <StyledA href={'https://www.linkedin.com/in/lucasqueirolo/'} target="_blank" rel="noopener noreferrer">
+                  <LinkedInIcon fontSize='inherit' />
+                </StyledA>
+                <StyledA href={'https://github.com/Luxxdev'} target="_blank" rel="noopener noreferrer">
+                  <GitHubIcon fontSize='inherit' />
+                </StyledA>
+              </div>
               <div>
                 {
                   MapMenuItems()
                 }
               </div>
-              <LanguageSwitcher />
+              <div style={{ gap: 5 }}>
+                <DarkModeToggle />
+                <LanguageSwitcher />
+              </div>
             </>
           ) : (
             <>
@@ -116,13 +128,21 @@ const NavBar = () => {
       <StyledMobileMenu open={mobileMenu} onClose={() => setMobileMenu(false)} >
         <Grid2 container display={'flex'} flexDirection={'column'} width={'100%'} >
           <Grid2 size='grow' display={'flex'} flexDirection={'column'} alignItems={'center'} justifyContent={'space-evenly'} >
-            <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} gap={10}>
+            <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} >
               <DarkModeToggle />
               <LanguageSwitcher />
             </Grid2>
             {
               MapMenuItems()
             }
+            <Grid2 width={'100%'} display={'flex'} justifyContent={'space-around'} >
+              <StyledA href={'https://www.linkedin.com/in/lucasqueirolo/'} target="_blank" rel="noopener noreferrer">
+                <LinkedInIcon fontSize='inherit' />
+              </StyledA>
+              <StyledA href={'https://github.com/Luxxdev'} target="_blank" rel="noopener noreferrer">
+                <GitHubIcon fontSize='inherit' />
+              </StyledA>
+            </Grid2>
           </Grid2>
         </Grid2>
       </StyledMobileMenu>

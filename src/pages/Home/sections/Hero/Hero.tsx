@@ -5,8 +5,8 @@ import DownloadIcon from '@mui/icons-material/Download'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail'
 import StyledButton from '../../../../components/StyledButton/StyledButton'
 // import { AnimatedBackground } from '../../../../components/AnimatedBackGround/AnimatedBackground'
-import resumeEN from '../../../../assets/images/LucasQueirolo_Resume.pdf'
-import resumePT from '../../../../assets/images/LucasQueirolo_Currículo.pdf'
+import resumeEN from '../../../../assets/curriculos/LucasQueirolo_Resume.pdf'
+import resumePT from '../../../../assets/curriculos/LucasQueirolo_Curriculo.pdf'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
 import { useTranslation } from 'react-i18next'
 import { toolbarHeight } from '../../../../components/NavBar/NavBar'
@@ -75,7 +75,7 @@ const Hero = () => {
                     onClick={() => {
                       const link = document.createElement('a')
                       link.href = t('oppositeLanguage') === 'en' ? resumePT : resumeEN
-                      link.download = t("donwloadLinkName")
+                      link.download = t("downloadLinkName")
                       document.body.appendChild(link)
                       link.click()
                       document.body.removeChild(link)
