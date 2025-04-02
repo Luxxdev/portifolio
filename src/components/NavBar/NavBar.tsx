@@ -41,6 +41,7 @@ const navLinks = [
   { id: 'about', label: 'navAbout' },
   { id: 'experience', label: 'navExperience' },
   { id: 'projects', label: 'navProjects' },
+  { id: 'footer', label: 'footerContact' },
 ]
 
 const NavBar = () => {
