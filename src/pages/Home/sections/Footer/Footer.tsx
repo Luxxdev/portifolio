@@ -66,7 +66,7 @@ const Footer = () => {
               </StyledLink>
             </Grid2>
             <Grid2 size={{ xs: 12, md: 4 }} >
-              <StyledLink href={`https://web.whatsapp.com/send/?phone=5521999894540&text=${t('messageGreeting')}`} target="_blank" rel="noopener noreferrer">
+              <StyledLink href={`https://api.whatsapp.com/send?phone=5521999894540&text=${t('messageGreeting')}`} target="_blank" rel="noopener noreferrer">
                 <CallIcon />
                 <StyledTypography>+55 (21) 99989-4540</StyledTypography>
               </StyledLink>
