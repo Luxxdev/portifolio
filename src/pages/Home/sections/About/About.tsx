@@ -30,7 +30,7 @@ const About = () => {
               </Typography>
             </Grid2>
 
-            <Grid2 size={{ xs: 7, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0} color='secondary.main'>
+            <Grid2 size={{ xs: 9, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0} color='secondary.main'>
               <SkillsTag fixedSizeRatio={true} secondColor={true}>
                 <SchoolIcon />
                 <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2}>
@@ -41,7 +41,7 @@ const About = () => {
               </SkillsTag>
             </Grid2>
 
-            <Grid2 size={{ xs: 7, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0}>
+            <Grid2 size={{ xs: 9, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0}>
               <SkillsTag fixedSizeRatio={true} secondColor={true}>
                 <SchoolIcon />
                 <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2} >
