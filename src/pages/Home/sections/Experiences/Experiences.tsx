@@ -24,7 +24,7 @@ const Experiences = () => {
                 <Container maxWidth="lg">
                     <Grid2 container spacing={2} justifyContent={'center'} >
                         <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'}>
-                            <Typography color="primary.contrastText" fontWeight={'400'} variant="h2" textAlign="center" pb={5}>
+                            <Typography color="primary.contrastText" fontWeight={'400'} variant="h3" textAlign="center" pb={5}>
                                 {t('experienceTitle')}
                             </Typography>
                         </Grid2>

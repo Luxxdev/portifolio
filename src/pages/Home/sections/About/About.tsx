@@ -22,44 +22,40 @@ const About = () => {
   return (
     <>
       <StyledAbout id="about">
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" >
           <Grid2 container spacing={2} justifyContent={'center'} pb={2}>
             <Grid2 size={{ xs: 12, md: 12 }} justifyContent={'center'}>
-              <Typography color="primary.contrastText" variant="h2" textAlign="center" pb={5} fontWeight={'400'}>
+              <Typography color="primary.contrastText" variant="h3" textAlign="center" pb={5} fontWeight={'400'}>
                 {t('aboutTitle')}
               </Typography>
             </Grid2>
 
-            <Grid2 size={{ xs: 9, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0} color='secondary.main'>
-              <SkillsTag fixedSizeRatio={true} secondColor={true}>
-                <SchoolIcon />
-                <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2}>
-                  <Typography color='primary.contrastText' variant='h5' fontWeight={'bold'} letterSpacing={1}>{t('aboutEducation')}</Typography>
-                  <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{t('aboutUniversity')}</Typography>
-                  <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{'2019-2021'}</Typography>
-                </Grid2>
-              </SkillsTag>
-            </Grid2>
+            <SkillsTag fixedSizeRatio={true} secondColor={true}>
+              <SchoolIcon />
+              <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2}>
+                <Typography color='primary.contrastText' variant='h5' fontWeight={'bold'} letterSpacing={1}>{t('aboutEducation')}</Typography>
+                <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{t('aboutUniversity')}</Typography>
+                <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{'2019-2021'}</Typography>
+              </Grid2>
+            </SkillsTag>
 
-            <Grid2 size={{ xs: 9, md: 3 }} display={'flex'} justifyContent={'center'} textAlign={'center'} paddingBottom={5} columnGap={0}>
-              <SkillsTag fixedSizeRatio={true} secondColor={true}>
-                <SchoolIcon />
-                <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2} >
+            <SkillsTag fixedSizeRatio={true} secondColor={true}>
+              <SchoolIcon />
+              <Grid2 display={'flex'} flexDirection={'column'} rowGap={1} justifyContent={'space-between'} height={'70%'} alignItems={'center'} color='secondary.main' mt={2}  >
 
-                  <Typography color='primary.contrastText' variant='h5' fontWeight={'bold'} letterSpacing={1}>{t('aboutEducation2')}</Typography>
-                  <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{t('aboutUniversity2')}</Typography>
-                  <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{'2025-' + t('present')}</Typography>
-                </Grid2>
-              </SkillsTag>
-            </Grid2>
+                <Typography color='primary.contrastText' variant='h5' fontWeight={'bold'} letterSpacing={1}>{t('aboutEducation2')}</Typography>
+                <Typography color='primary.contrastText' textAlign={'center'} variant='h6' fontWeight={'lighter'} letterSpacing={2}>{t('aboutUniversity2')}</Typography>
+                <Typography color='primary.contrastText' variant='h6' fontWeight={'lighter'} letterSpacing={2}>{'2025-' + t('present')}</Typography>
+              </Grid2>
+            </SkillsTag>
 
-            <Grid2 size={{ xs: 12, md: 12 }} borderBottom={2} borderColor="secondary.main" paddingBottom={10} justifyContent={'center'}>
+            <Grid2 size={{ xs: 12, md: 12 }} borderBottom={2} borderColor="secondary.main" pb={10} pt={5} justifyContent={'center'}>
               <Typography color="primary.contrastText" variant="h5" textAlign="justify" >
                 {t('aboutText')}
               </Typography>
             </Grid2>
             <Grid2 size={{ xs: 12, md: 12 }} marginTop={5}>
-              <Typography color="primary.contrastText" fontWeight={'400'} variant="h2" textAlign="center" pb={5}>
+              <Typography color="primary.contrastText" fontWeight={'400'} variant="h3" textAlign="center" pb={5}>
                 {t('skillsTitle')}
 
               </Typography>
@@ -73,8 +69,8 @@ const About = () => {
               </Grid2>
             ))}
           </Grid2>
-        </Container>
-      </StyledAbout>
+        </Container >
+      </StyledAbout >
     </>
   )
 }

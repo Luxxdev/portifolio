@@ -49,7 +49,7 @@ const Footer = () => {
     <>
       <StyledFooter id="footer">
         <Container>
-          <Typography variant="h2" fontWeight={'400'} textAlign={'center'} paddingBottom={'75px'}>
+          <Typography variant="h3" fontWeight={'400'} textAlign={'center'} paddingBottom={'75px'}>
             {t('footerContact')}
           </Typography>
           <Grid2 container spacing={5}>
