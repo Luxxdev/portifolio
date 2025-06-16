@@ -75,7 +75,7 @@ const Hero = () => {
                     onClick={() => {
                       const link = document.createElement('a')
                       link.href = t('oppositeLanguage') === 'en' ? resumePT : resumeEN
-                      link.download = t("downloadLinkName")
+                      link.download = t('oppositeLanguage') === 'en' ? 'LucasQueirolo_Curriculo.pdf' : 'LucasQueirolo_Resume.pdf'
                       document.body.appendChild(link)
                       link.click()
                       document.body.removeChild(link)
