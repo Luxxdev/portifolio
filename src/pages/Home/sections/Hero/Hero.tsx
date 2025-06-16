@@ -74,7 +74,7 @@ const Hero = () => {
                   <StyledButton
                     onClick={() => {
                       const link = document.createElement('a')
-                      link.href = t('oppositeLanguage') === 'en' ? resumePT : resumeEN
+                      link.href = t('oppositeLanguage') === 'en' ? '/curriculos/LucasQueirolo_Curriculo.pdf' : '/curriculos/LucasQueirolo_Resume.pdf'
                       link.download = t('oppositeLanguage') === 'en' ? 'LucasQueirolo_Curriculo.pdf' : 'LucasQueirolo_Resume.pdf'
                       document.body.appendChild(link)
                       link.click()
