@@ -9,16 +9,6 @@ Welcome to my personal portfolio! This project was developed to showcase my proj
 
 This is my personal portfolio website, built to highlight my work as a developer and provide a comprehensive view of my technical skills and completed projects.
 
-##  Features
-
--  Modern and responsive design
--  Optimized performance
--  Fully adapted for mobile devices
--  Clean and intuitive interface
--  Featured projects section
--  Contact form
--  Links to social media and GitHub
-
 ##  Technologies Used
 
 - HTML5
