@@ -10,7 +10,7 @@ export const LanguageSwitcher = () => {
     backgroundColor: 'transparent',
     border: `2px solid ${theme.palette.primary.contrastText}`,
     borderRadius: '3px',
-    height: '5vh',
+    height: '50px',
     color: theme.palette.primary.contrastText,
     display: 'flex',
     aspectRatio: 1 / 1,

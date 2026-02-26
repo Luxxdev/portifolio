@@ -9,7 +9,7 @@ export const StyledA = styled('a')(({ theme }) => ({
   textDecoration: 'none',
   alignItems: 'center',
   position: 'relative',
-  fontSize: '5vh',
+  fontSize: '50px',
   // [theme.breakpoints.up('md')]: {
   //   position: 'absolute',
   //   top: '2.5vh',

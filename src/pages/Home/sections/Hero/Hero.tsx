@@ -9,7 +9,6 @@ import StyledButton from '../../../../components/StyledButton/StyledButton'
 // import resumePT from '../../../../assets/curriculos/LucasQueirolo_Curriculo.pdf'
 import { ScrollTo } from '../../../../components/NavBar/NavBar'
 import { useTranslation } from 'react-i18next'
-import { toolbarHeight } from '../../../../components/NavBar/NavBar'
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -17,8 +16,8 @@ const Hero = () => {
   const StyledHero = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
     display: 'flex',
-    marginTop: `${toolbarHeight}dvh`,
-    minHeight: `calc(100dvh - ${toolbarHeight}dvh)`,
+    marginTop: '90px',
+    minHeight: `calc(100dvh - 90px)`,
     alignItems: 'center',
     paddingBottom: '50px',
     width: '100%',

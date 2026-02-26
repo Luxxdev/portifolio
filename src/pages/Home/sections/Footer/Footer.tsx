@@ -26,7 +26,7 @@ const Footer = () => {
     textDecoration: 'none',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '5vh',
+    height: '50px',
     border: `1px solid ${theme.palette.primary.contrastText}`,
     borderColor: theme.palette.primary.contrastText,
     '&:hover': {

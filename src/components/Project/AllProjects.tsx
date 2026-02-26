@@ -1,8 +1,7 @@
 import itch from '../../assets/images/itchimg.png'
-import growers from '../../assets/images/growersimg.png'
 import portfolio from '../../assets/images/portfolio.png'
 import francogagnor from '../../assets/images/francogagnor.png'
-
+import mediaarchive from '../../assets/images/mediaarchive.png'
 
 const allProjetcs = [
     {
@@ -14,18 +13,6 @@ const allProjetcs = [
         ],
         techs: ['TypeScript', 'React', 'MUI'],
         site: true
-
-    },
-
-    {
-        name: 'project2Title',
-        description: 'project2Text',
-        image: growers,
-        buttons: [
-            { label: 'itchPage', link: 'https://opaogamestudio.itch.io/growers' },
-            { label: 'steamPage', link: 'https://store.steampowered.com/app/2613940/Growers/' },
-        ],
-        techs: ['Godot', 'GDScript']
     },
 
     {
@@ -34,27 +21,8 @@ const allProjetcs = [
         image: itch,
         buttons: [
             { label: 'itchPage', link: 'https://luxezito.itch.io/' },
-            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev?tab=repositories' },
         ],
         techs: ['Unity', 'C#', 'Godot', "GDScript"],
-    },
-    {
-        name: 'project4Title',
-        description: 'project4Text',
-        image: '',
-        buttons: [
-            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/Volin' },
-        ],
-        techs: ['Unity', 'C#'],
-    },
-    {
-        name: 'project5Title',
-        description: 'project5Text',
-        image: '',
-        buttons: [
-            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/exyon-bot' },
-        ],
-        techs: ['Selenium', 'Python'],
     },
 
     {
@@ -68,6 +36,28 @@ const allProjetcs = [
         site: true
 
     },
+    {
+        name: 'project7Title',
+        description: 'project7Text',
+        image: mediaarchive,
+        buttons: [
+            { label: 'projectsButtonViewCodeFront', link: 'https://github.com/Luxxdev/media-archive-front' },
+            { label: 'projectsButtonViewCodeBack', link: 'https://github.com/Luxxdev/media-archive-api' },
+        ],
+        techs: ['html/css', 'javaScript', 'Flask', 'SQLite'],
+        site: true,
+    },
+    {
+        name: 'project5Title',
+        description: 'project5Text',
+        image: '',
+        buttons: [
+            { label: 'projectsButtonViewCode', link: 'https://github.com/Luxxdev/exyon-bot' },
+        ],
+        techs: ['Selenium', 'Python'],
+    },
+
+
 ]
 
 export default allProjetcs

@@ -13,10 +13,10 @@ export const toolbarHeight = 10
 
 const StyledMobileMenu = styled(Modal)(({ }) => ({
   backdropFilter: 'blur(15px)',
-  top: `${toolbarHeight}dvh`,
+  top: `90px`,
   display: 'flex',
   justifyContent: 'space-between',
-  height: `calc(100dvh - ${toolbarHeight}dvh)`,
+  height: `calc(100vh - 90px)`,
   width: '100dvw',
   position: 'fixed',
   overflow: 'hidden',
@@ -57,7 +57,7 @@ const NavBar = () => {
 
   const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     justifyContent: 'space-between',
-    height: `${toolbarHeight}dvh`,
+    height: '90px',
     padding: 24,
     backgroundColor: theme.palette.primary.dark,
     overflow: 'hidden',

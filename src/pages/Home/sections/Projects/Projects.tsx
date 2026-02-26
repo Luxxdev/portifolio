@@ -26,7 +26,7 @@ const Projects = () => {
           {t('projectsTitle')}
         </Typography>
 
-        <Grid2 container spacing={10} width={{ md: '65vw', sm: '80vw', xs: '80vw' }} >
+        <Grid2 container spacing={10} width={{ md: '65vw', sm: '80vw', xs: '80vw' }} justifyContent={'center'}>
           {allProjetcs.map((project, index) => (
             <Project
               name={t(project.name)}

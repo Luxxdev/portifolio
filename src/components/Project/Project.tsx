@@ -84,11 +84,11 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
           <Grid2 size={12} >
             <TextContainer>
               <Grid2>
-                <Typography color="primary.contrastText" variant="h3" textAlign="center" mt={3} pb={1} >
+                <Typography color="primary.contrastText" variant="h3" textAlign="center" ml={1} mr={1} mt={3} mb={1} pb={1}  >
                   {name}
                 </Typography>
 
-                <Grid2 container display="flex" justifyContent="center" margin={'2vh 3vh'} mt={0} padding={1} rowGap={1} columnGap={0.5} alignItems={'center'} borderTop={1} borderBottom={1} borderColor={"secondary.contrastText"}>
+                <Grid2 container display="flex" justifyContent="center" my={2} mx={3} mt={0} padding={1} rowGap={1} columnGap={0.5} alignItems={'center'} borderTop={1} borderBottom={1} borderColor={"secondary.contrastText"}>
                   {techs?.map(tech => (
                     <Grid2 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20px, 1fr))' }}>
                       <TechTag children={tech} />
@@ -97,11 +97,11 @@ const Project: React.FC<ProjectProps> = ({ name, image, description, buttons = [
                 </Grid2>
               </Grid2>
 
-              <Typography color="primary.contrastText" textAlign={'justify'} maxHeight={'30vh'} overflow={'auto'} alignContent={'center'} padding={'5vh 2vh'} margin={'0vh 3vh'} >
+              <Typography color="primary.contrastText" textAlign={'justify'} maxHeight={290} overflow={'auto'} alignContent={'center'} px={2} py={5} mx={3} my={0} >
                 {description}
               </Typography>
 
-              <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} mb={'3vh'} mt={3}>
+              <Grid2 container size='auto' display="flex" justifyContent="center" spacing={3} mb={1} mt={3}>
                 {buttons.map((button, index) => (
                   <Grid2 size={5} key={index}>
                     <StyledButton
