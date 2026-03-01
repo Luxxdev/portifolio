@@ -17,7 +17,7 @@ const Hero = () => {
     backgroundColor: theme.palette.primary.light,
     display: 'flex',
     marginTop: '90px',
-    minHeight: `calc(100dvh - 90px)`,
+    minHeight: `100vh`,
     alignItems: 'center',
     paddingBottom: '50px',
     width: '100%',
