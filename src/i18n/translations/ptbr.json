@@ -38,7 +38,7 @@
     "project7Title": "Media Archive",
     "project7Text": "Projeto realizado durante a pós-graduação em Engenharia de Software. Consiste em uma API RESTful para gerenciamento de mídias construída com Flask e FastAPI e utilizando SQLite como banco de dados, permitindo operações CRUD para gerenciar informações das mídias.",
     "experienceTitle": "Experiência",
-    "experience1Title": "Banco BMG(Freelance)",
+    "experience1Title": "Banco BMG (Freelance)",
     "experience1Text": "Trabalhei como desenvolvedor de software freelancer, prestando serviço para o Banco BMG através da empresa E-xyon. Desenvolvi um bot de automação para navegação em site e manipulação de planilhas, realizando leitura, preenchimento e verificação de dados, com geração de logs por iteração. Também fui responsável pela comunicação com a empresa contratante e pela documentação técnica do projeto.",
     "experience2Title": "O Pão Game Studio",
     "experience2Text": "Atuei como game designer e programador no O Pão Game Studio, um estúdio indie de jogos do Rio de Janeiro. Atuei em múltiplas tarefas e fui o principal responsável pela gestão dos projetos. Através do estúdio, prestei serviço para a Legends of Learning, plataforma educacional americana, desenvolvendo jogos de ciências e matemática para o público infanto-juvenil. O principal projeto interno foi o jogo Growers, que recebeu propostas de investimento através do programa Indie Hero, foi exposto no Japão durante a Tokyo Game Show e se encontra atualmente à venda no Itch.io e Steam.",
