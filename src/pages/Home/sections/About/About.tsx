@@ -3,7 +3,7 @@ import SkillsTag from '../../../../components/SkillsTag/SkillsTag'
 import SchoolIcon from '@mui/icons-material/School'
 import { useTranslation } from 'react-i18next'
 
-const skills = ["HTML", "CSS", "JavaScript", "React", 'MUI', "TypeScript", "Git", "Selenium", "Python", "C#", 'C++', 'SQL', 'Flask', 'FastAPI', 'Docker', 'Node.js', 'GDScript', 'Unreal Engine', 'Godot Engine', 'Unity Engine', 'Game Design']
+const skills = ["HTML", "CSS", "JavaScript", "React", 'MUI', "TypeScript", "Git", "Selenium", "Python", "C#", 'C++', 'SQL', 'Flask', 'SQLAlchemy', 'Docker', 'Node.js', 'GDScript', 'Unreal Engine', 'Godot Engine', 'Unity Engine', 'Game Design']
 
 const About = () => {
 
