@@ -1,7 +1,7 @@
 const allExperiences = [
     {
         name: 'experience1Title',
-        date: '01/2025-03/2025',
+        date: '12/2024-02/2025',
         description: 'experience1Text',
     },
     {
